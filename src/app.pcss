@@ -2,3 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	* {
+		/* @apply border; */
+	}
+
+	section {
+		@apply mx-auto mb-8 w-[min(100%,_60rem)] px-2;
+	}
+
+	.content a {
+		@apply text-gold-900 underline;
+	}
+}

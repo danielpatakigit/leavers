@@ -26,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@neoconfetti/svelte": "^2.2.1"
+		"@neoconfetti/svelte": "^2.2.1",
+		"@svelte-put/dragscroll": "^3.0.0"
 	}
 }
