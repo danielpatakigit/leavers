@@ -57,3 +57,168 @@ export const faq = [
 		html: `<p>You can find the house rules <a href="#">here</a>. Please ensure you have read and understood these rules, as well as the consequences for breaking them. This is a required step of the registration process.</p>`,
 	},
 ];
+
+export const organizers = [
+	{
+		name: "Anna Házas",
+		tag: "Chair of the Organizing Committee",
+		img: "placeholder.png",
+	},
+	{
+		name: "Eleonóra Bolhuis",
+		tag: "Head of External Relations and Sponsorships",
+		img: "placeholder.png",
+	},
+	{
+		name: "Aliz Hárs",
+		tag: "Sponsorships Coordinator",
+		img: "placeholder.png",
+	},
+	{
+		name: "Ipsum Lorem",
+		tag: "External Relations Coordinator",
+		img: "placeholder.png",
+	},
+	{
+		name: "Patrik Nadrai",
+		tag: "Head of Content and Creative",
+		img: "placeholder.png",
+	},
+	{ name: "Emil", tag: "Content Officer", img: "placeholder.png" },
+	{
+		name: "Ipsum Lorem",
+		tag: "Content Officer",
+		img: "placeholder.png",
+	},
+	{
+		name: "Panna Kovács",
+		tag: "Content Officer",
+		img: "placeholder.png",
+	},
+	{
+		name: "Kamilla Kovács",
+		tag: "Head of Participation and Communication",
+		img: "placeholder.png",
+	},
+	{
+		name: "Mimi",
+		tag: "Participation Coordinator",
+		img: "placeholder.png",
+	},
+	{ name: "Vyvy", tag: "Welfare Officer", img: "placeholder.png" },
+	{
+		name: "István Halász",
+		tag: "Camp Coordinator",
+		img: "placeholder.png",
+	},
+	{
+		name: "Dániel Pataki",
+		tag: "Head of Finance and Logistics",
+		img: "placeholder.png",
+	},
+	{
+		name: "Mátyás Örlős",
+		tag: "Finance Coordinator",
+		img: "placeholder.png",
+	},
+	{
+		name: "Luca Vidman",
+		tag: "Logistics Coordinator",
+		img: "placeholder.png",
+	},
+	{
+		name: "Julcsi Balázs",
+		tag: "Logistics Coordinator",
+		img: "placeholder.png",
+	},
+];
+
+export const rules = [
+	{
+		name: "Rules for all",
+		html: `<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+	</p>
+	<li>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+		dicta commodi voluptate obcaecati, doloremque eum perferendis
+		provident sed voluptates non eveniet unde! Corporis beatae, vel
+		voluptate exercitationem reprehenderit nesciunt dicta!
+	</li>
+	<li>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+		dicta commodi voluptate obcaecati, doloremque eum perferendis
+		provident sed voluptates non eveniet unde! Corporis beatae, vel
+		voluptate exercitationem reprehenderit nesciunt dicta!
+	</li><li>
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+	dicta commodi voluptate obcaecati, doloremque eum perferendis
+	provident sed voluptates non eveniet unde! Corporis beatae, vel
+	voluptate exercitationem reprehenderit nesciunt dicta!
+</li>
+
+<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+	</p><p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+</p>`,
+	},
+	{
+		name: "Rules for Leavers",
+		html: `<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+	</p>
+	<li>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+		dicta commodi voluptate obcaecati, doloremque eum perferendis
+		provident sed voluptates non eveniet unde! Corporis beatae, vel
+		voluptate exercitationem reprehenderit nesciunt dicta!
+	</li>
+	<li>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+		dicta commodi voluptate obcaecati, doloremque eum perferendis
+		provident sed voluptates non eveniet unde! Corporis beatae, vel
+		voluptate exercitationem reprehenderit nesciunt dicta!
+	</li><li>
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+	dicta commodi voluptate obcaecati, doloremque eum perferendis
+	provident sed voluptates non eveniet unde! Corporis beatae, vel
+	voluptate exercitationem reprehenderit nesciunt dicta!
+</li>
+
+<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+	</p><p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+</p>`,
+	},
+	{
+		name: "Rules for Non-Leavers",
+		html: `<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+	</p>
+	<li>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+		dicta commodi voluptate obcaecati, doloremque eum perferendis
+		provident sed voluptates non eveniet unde! Corporis beatae, vel
+		voluptate exercitationem reprehenderit nesciunt dicta!
+	</li>
+	<li>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+		dicta commodi voluptate obcaecati, doloremque eum perferendis
+		provident sed voluptates non eveniet unde! Corporis beatae, vel
+		voluptate exercitationem reprehenderit nesciunt dicta!
+	</li><li>
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+	dicta commodi voluptate obcaecati, doloremque eum perferendis
+	provident sed voluptates non eveniet unde! Corporis beatae, vel
+	voluptate exercitationem reprehenderit nesciunt dicta!
+</li>
+
+<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+	</p><p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
+</p>`,
+	},
+];

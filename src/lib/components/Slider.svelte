@@ -4,7 +4,6 @@
 	import { onMount } from "svelte";
 
 	export let hasGap = false;
-	export let coverPercentage = "";
 
 	let slider;
 	let currentSlidePosition = 0;
@@ -34,11 +33,11 @@
 	onMount(() => {
 		slider.addEventListener(
 			"scroll",
-			() => (currentSlidePosition = slider.scrollLeft),
+			() => (currentSlidePosition = slider.scrollLeft()),
 		);
 		window.addEventListener(
 			"resize",
-			() => (currentSlidePosition = slider.scrollLeft),
+			() => (currentSlidePosition = slider.scrollLeft()),
 		);
 	});
 </script>

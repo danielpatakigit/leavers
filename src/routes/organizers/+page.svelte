@@ -1,0 +1,63 @@
+<script>
+	import Title from "../../lib/components/Title.svelte";
+	import { organizers } from "$lib";
+	import OrganizerCard from "../../lib/components/OrganizerCard.svelte";
+	import Link from "../../lib/components/Link.svelte";
+</script>
+
+<div class="mt-36"></div>
+<section class="">
+	<Title
+		h1={true}
+		id="organizers"
+		tag="THE ORGANIZING TEAM"
+		title="Meet Our Dedicated Organizers"
+		subtitle="Passionate Milestone Alumni Leading the Way"
+		backHref="/"
+		backText="Home"
+		forwardHref="/houserules"
+		forwardText="House Rules"
+	></Title>
+</section>
+<section class="mt-24">
+	<div
+		class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6"
+	>
+		{#each organizers as content}
+			<OrganizerCard {content}></OrganizerCard>
+		{/each}
+	</div>
+</section>
+
+<section class="mt-24">
+	<Title
+		h1={false}
+		id="further"
+		tag="more leavers' camp"
+		title="Check out these pages too!"
+		subtitle="Just to make sure that you have the full picture of MSLC24 make sure that you have read these important pages below as well and have followed the camp on Instagram"
+	></Title>
+</section>
+
+<section>
+	<div class="flex flex-col items-center gap-4">
+		<Link
+			href="/register"
+			icon=""
+			text="Register Now!"
+			hot={true}
+		/>
+		<Link
+			href=""
+			icon="mdi:house"
+			text="House Rules"
+			hot={false}
+		/>
+		<Link
+			href=""
+			icon="mdi:instagram"
+			text="@milestoneleaverscamp"
+			hot={false}
+		/>
+	</div>
+</section>

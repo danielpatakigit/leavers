@@ -6,7 +6,10 @@
 	<div
 		class=" gap mx-4 mt-4 flex w-[min(100%,_40rem)] items-center justify-between rounded-xl border border-zinc-100 bg-white px-4 shadow-lg"
 	>
-		<div class="flex items-center gap-1">
+		<a
+			href="/"
+			class="flex items-center gap-1"
+		>
 			<div class="w-16">
 				<img
 					src="/ms laika.png"
@@ -17,14 +20,19 @@
 				<span class="-mb-1 font-serif font-bold">Milestone</span>
 				<span class="">Leavers' Camp</span>
 			</div>
-		</div>
+		</a>
 		<div class="flex items-center gap-4">
-			<a href="/">Info</a>
 			<Link
 				href="/"
 				icon=""
+				text="Home"
+				hot={false}
+			/>
+			<Link
+				href="/register"
+				icon=""
 				text="Register"
-				hot="true"
+				hot={true}
 			/>
 		</div>
 	</div>

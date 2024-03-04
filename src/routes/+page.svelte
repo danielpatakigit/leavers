@@ -14,7 +14,7 @@
 <section class="flex flex-col items-center">
 	<h1 class=" flex flex-col text-balance text-center text-4xl">
 		<span class="font-sans font-semibold">The Ultimate</span>
-		<span class="font-serif font-bold text-gold-800">
+		<span class="mt-2 font-serif font-bold text-gold-800">
 			Milestone Experience
 		</span>
 	</h1>
@@ -134,7 +134,7 @@
 			hot={false}
 		/>
 		<Link
-			href=""
+			href="/organizers"
 			icon="mdi:user"
 			text="List of Organizers"
 			hot={false}
