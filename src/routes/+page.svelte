@@ -54,10 +54,7 @@
 <section class="mt-24">
 	<Slider>
 		{#each Array(10) as _}
-			<div
-				class=""
-				style="flex: 0 0 35%;"
-			>
+			<div class="flex-[0_0_85%] md:flex-[0_0_45%]">
 				<img
 					src="/placeholder.png"
 					alt="placeholder"
@@ -95,7 +92,7 @@
 	<Slider hasGap={true}>
 		{#each testamonials as content, i}
 			<TestamonialCard
-				style="flex: 0 0 50%;"
+				class="flex-[0_0_80%] md:flex-[0_0_55%]"
 				{content}
 			></TestamonialCard>
 		{/each}

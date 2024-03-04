@@ -83,7 +83,11 @@
 	}
 
 	:global(.slider > *) {
-		flex: 0 0 45%;
+		/* Don't do it like this: */
+		/* flex: 0 0 45%; */
+
+		/* Instead specify it on the child element itself with tailwind classes: */
+		/* <div class="flex-[0_0_45%]"> ... </div> */
 		scroll-snap-align: center;
 	}
 
@@ -96,7 +100,7 @@
 	}
 
 	.slider-button-wrapper {
-		@apply mx-2 hidden items-center md:grid;
+		@apply mx-2  grid items-center;
 	}
 
 	.slider-button {
