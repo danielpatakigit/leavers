@@ -7,11 +7,13 @@
 >
 	<h2>About the Leavers' Camp!</h2>
 	<p>
-		The Milestone Leavers’ Camp (MSLC24) is located in Csórompuszta,
-		Hungary, and will take place from July 31st to August 4th, 2024.
-		This annual event is specifically designed for graduating students
-		from Milestone (a.k.a. leavers), however, Milestone alumni are are
-		also welcome to participate.
+		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary,
+		scheduled for July 31st to August 4th, 2024, is <strong>
+			exclusively
+		</strong>
+		tailored for graduating students from Milestone who have
+		<strong>completed their senior year successfully</strong>
+		(a.k.a). However, Milestone alumni are also invited to join in.
 	</p>
 	<p>
 		At the Milestone Leavers' Camp, our primary aim is to foster
@@ -38,9 +40,12 @@
 			alumni (see FAQ for details)
 		</li>
 		<li>Breakfast, lunch, and dinner</li>
-		<li>An official Milestone hoodie</li>
 		<li>
 			Access to activities organized for both leavers and alumni
+		</li>
+		<li>
+			An official Milestone hoodie (included in the price for leavers,
+			optional for others)
 		</li>
 		<li>Transportation to and from the camp (only for leavers)</li>
 	</ul>
@@ -48,17 +53,18 @@
 	<h3>Registration & Payment Process</h3>
 	<ol>
 		<li>
-			Click on <a href="">register</a>
+			Click on <a href="/register">register</a>
 			and then log in with your Google account to confirm your identity.
 		</li>
 		<li>Fill out the Google Form with your information.</li>
 	</ol>
 	<p>
-		After you've registered Milestone will send out a fee request for
-		the deposit amount. Please make sure to pay this fee <strong>
-			max. 3 days
-		</strong>
-		after it has been issued to you. If you don't we will
+		After you've registered Milestone will send out a fee request per
+		email for
+		<strong>the deposit amount.</strong>
+		Please make sure to pay this fee
+		<strong>within 3 days</strong>
+		. If you don't we will
 		<strong>immediately cancel your registration.</strong>
 	</p>
 	<p>
@@ -77,7 +83,7 @@
 	</p>
 	<p>
 		For further information and answers to your potential questions
-		please see the <a href="">FAQ.</a>
+		please see the <a href="/#faq">FAQ.</a>
 	</p>
 	<div class="mt-10 flex items-center justify-center">
 		<Link

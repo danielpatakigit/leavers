@@ -18,7 +18,7 @@ export const testamonials = [
 		html: `<p>“The leavers camp was a perfect ending to my Milestone academic career. This is where I realised that Milestone is more than an institute and that the alumni community is very close knit. The repeated class dance, evening bonfires and team games were definitely a highlight! </p> <p> And of course, the infamous last night...”</p>`,
 	},
 	{
-		name: "Ágnes Horvát ",
+		name: "Ágnes Horváth",
 		tag: "Lead Educational Programme Designer",
 
 		html: `<p>“What is Leavers' Camp, you ask? Depending on who you ask, you will get a variety of answers. Leavers' Camp is...</p>
@@ -41,7 +41,7 @@ export const faq = [
 	{
 		question:
 			"I am scared everyone attending the camp will already be friends and I will feel left out - should I still attend the camp if I am not involved in the community?",
-		html: `<p>We understand that it might seem intimidating to join the camp if you do not know many people from your cohort. Please rest assured that the group activities will help you meet new people and form new friendships, so you will not feel left out! A Welfare Officer will also be present at the camp to ensure everyone has a comfortable experience.</p>`,
+		html: `<p>We understand that it might seem intimidating to join the camp if you do not know many people from your cohort. Please be rest assured that the group activities will help you meet new people and form new friendships, so you will not feel left out! A Welfare Officer will also be present at the camp to ensure everyone has a comfortable experience.</p>`,
 	},
 	{
 		question: "Who is organizing the camp?",
@@ -50,7 +50,7 @@ export const faq = [
 	{
 		question:
 			"I have a specific question I don’t find the answer(s) to. Who do I reach out to?",
-		html: `<p>The quickest way of directly contacting the organizers is by either writing to <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a> or by sending a DM through our <a href="#">Instagram page</a>.</p>`,
+		html: `<p>The quickest way of directly contacting the organizers is by writing to <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a>. Futhermore, it's also worth considering reaching out to the Head of Seniors or Erzsébet Dúcz, the Student Life Coordinator (<a href="mailto:erzsebet.ducz@msinst.org">erzsebet.ducz@msinst.org</a>)</p>`,
 	},
 	{
 		question: "Where can I read the house rules?",
