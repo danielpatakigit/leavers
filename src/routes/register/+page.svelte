@@ -160,7 +160,7 @@
 			{/if}
 			<div class="mt-4">
 				<Link
-					href=""
+					href="https://docs.google.com/forms/d/e/1FAIpQLSdtphDkIxh4sdhpS-f74qEaBVAAkmcRdFaDjnzNmJ5j0eq-zA/viewform?usp=sf_link"
 					icon="mdi:form"
 					text="Open Google Form"
 					hot={true}
