@@ -2,7 +2,7 @@
 	import Link from "./Link.svelte";
 </script>
 
-<header class="fixed top-0 flex w-full justify-center">
+<header class="fixed top-0 z-50 flex w-full justify-center">
 	<div
 		class=" gap mx-4 mt-4 flex w-[min(100%,_40rem)] items-center justify-between rounded-xl border border-zinc-100 bg-white px-4 shadow-lg"
 	>

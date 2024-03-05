@@ -29,17 +29,6 @@
 			behavior: "smooth",
 		});
 	}
-
-	onMount(() => {
-		slider.addEventListener(
-			"scroll",
-			() => (currentSlidePosition = slider.scrollLeft()),
-		);
-		window.addEventListener(
-			"resize",
-			() => (currentSlidePosition = slider.scrollLeft()),
-		);
-	});
 </script>
 
 <div class="grid grid-cols-[auto,_1fr,auto]">
