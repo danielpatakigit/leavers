@@ -41,7 +41,7 @@
 	}
 </script>
 
-<div class="grid grid-cols-[auto,_1fr,auto]">
+<div class="grid grid-cols-1 md:grid-cols-[auto,_1fr,auto]">
 	<div class="slider-button-wrapper">
 		<button
 			type="button"
@@ -95,7 +95,7 @@
 	}
 
 	.slider-button-wrapper {
-		@apply mx-2  grid items-center;
+		@apply mx-2 hidden items-center md:grid;
 	}
 
 	.slider-button {

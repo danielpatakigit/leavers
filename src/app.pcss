@@ -23,7 +23,12 @@
 	button,
 	a,
 	.checkbox-label,
-	.option-label {
+	.option-label,
+	.role-label {
 		@apply transition-all active:scale-95;
+	}
+
+	button {
+		@apply disabled:pointer-events-none disabled:opacity-50;
 	}
 }

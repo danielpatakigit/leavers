@@ -3,13 +3,10 @@
 	import "../app.pcss";
 	import Footer from "../lib/components/Footer.svelte";
 	import Header from "../lib/components/Header.svelte";
-	import { refreshUser } from "../lib/auth.js";
 	import { user } from "../lib/stores";
 
 	onMount(async () => {
-		const pb_auth = JSON.parse(
-			localStorage.getItem("pocketbase_auth"),
-		);
+		const pb_auth = JSON.parse(localStorage.getItem("pocketbase_auth"));
 		if (pb_auth) {
 			$user = pb_auth.model;
 		} else {

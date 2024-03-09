@@ -34,8 +34,7 @@ export const testamonials = [
 
 export const faq = [
 	{
-		question:
-			"How does the allocation of indoor places work exactly?",
+		question: "How does the allocation of indoor places work exactly?",
 		html: `<p>There is a limited number of indoor sleeping places available. Therefore, we cannot guarantee indoor accommodation for non-leavers. In such cases, we kindly ask you to bring a tent. As a leaver participant, you have the option to deliberately choose to sleep in your own tent. Otherwise, the allocation of indoor places functions on a first-come-first-served basis, with team leaders having priority. You will be notified in due time about whether you need to bring a tent or not.</p>`,
 	},
 	{
@@ -222,3 +221,49 @@ export const rules = [
 </p>`,
 	},
 ];
+
+export let roles = [
+	{
+		value: "leaver",
+		label: "Leaver",
+		description: "Graduating MS Senior",
+		icon: "solar:diploma-bold-duotone",
+	},
+	{
+		value: "alumni",
+		label: "Alumni",
+		description: "MS Graduate",
+		icon: "solar:square-academic-cap-2-bold",
+	},
+	{
+		value: "staff",
+		label: "Staff/Faculty",
+		description: "MS Staff/Faculty Member",
+		icon: "solar:tea-cup-bold-duotone",
+	},
+];
+
+export let days = [
+	{
+		value: "Wednesday",
+		label: "Wed",
+		description: "Jul. 31.",
+	},
+	{
+		value: "Thursday",
+		label: "Thu",
+		description: "Aug. 1.",
+	},
+	{
+		value: "Friday",
+		label: "Fri",
+		description: "Aug. 2.",
+	},
+	{
+		value: "Saturday",
+		label: "Sat",
+		description: "Aug. 3.",
+	},
+];
+
+export let sizes = ["S", "M", "L", "XL"];

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Link from "./Link.svelte";
 </script>
 
@@ -13,7 +13,7 @@
 		</strong>
 		tailored for graduating students from Milestone who have
 		<strong>completed their senior year successfully</strong>
-		(a.k.a). However, Milestone alumni are also invited to join in.
+		. However, Milestone alumni are also invited to join in.
 	</p>
 	<p>
 		At the Milestone Leavers' Camp, our primary aim is to foster
@@ -26,14 +26,25 @@
 
 	<h3>Camp prices</h3>
 	<ul>
-		<li>For Milestone Seniors: 60.000 Ft for the whole camp</li>
 		<li>
-			For Milestone Alumni: 15.000 Ft per night (only 12.500 Ft if
-			you're also a team leader)
+			For Milestone Seniors (Leavers): <strong>
+				60 000 Ft <u>for the whole camp</u>
+			</strong>
 		</li>
+		<br />
+		<li>
+			For Milestone Alumni: <strong>
+				15 000 Ft <u>per night</u>
+			</strong>
+		</li>
+		<i class="text-sm">
+			(With team leader discount: <strong>
+				12 500 Ft per night)
+			</strong>
+		</i>
 	</ul>
 
-	<span class="strong">These prices include:</span>
+	<span>These prices include:</span>
 	<ul>
 		<li>
 			Indoor accommodation guaranteed for leavers and optional for
@@ -51,29 +62,42 @@
 	</ul>
 
 	<h3>Registration & Payment Process</h3>
-	<ol>
+	<span>1. Deposit Instalment:</span>
+	<ul>
+		<li>20 000 Ft for leavers and team leader alumni</li>
+		<li>50% of your registration fee for everybody else</li>
+	</ul>
+	<p>
+		After you've <a
+			class="font-bold"
+			href="/register"
+		>
+			registered
+		</a>
+		Milestone will send out a fee request per email for the
+		<strong>deposit instalment</strong>
+		of your registration fee.
+	</p>
+	<p class="italic">
+		Please make sure to pay this fee within 3 days after receiving it.
+		If you don't we will immediately cancel your registration.
+	</p>
+	<span>2. Remainder Instalment:</span>
+	<ul>
+		<li>The remaining 40 000 Ft for leavers</li>
+		<li>The remaining 30 000 Ft for team leader alumni</li>
 		<li>
-			Click on <a href="/register">register</a>
-			and then log in with your Google account to confirm your identity.
+			The remaining 50% of your registration fee for everybody else
 		</li>
-		<li>Fill out the Google Form with your information.</li>
-	</ol>
+		<li>(+ optional Milestone Hoodie for non-leavers)</li>
+	</ul>
 	<p>
-		After you've registered Milestone will send out a fee request per
-		email for
-		<strong>the deposit amount.</strong>
-		Please make sure to pay this fee
-		<strong>within 3 days</strong>
-		. If you don't we will
-		<strong>immediately cancel your registration.</strong>
+		The remainder instalment of your participation fee will be issued
+		to you on the 17th of June, exactly 6 weeks before the week of the
+		camp. Make sure to pay this instalment too within 3 days to keep
+		your registration.
 	</p>
-	<p>
-		The remainder part of your participation fee will be issued to you
-		on the 17th of June, exactly 6 weeks before the week of the camp.
-		Make sure to pay this fee too within 3 days to keep your
-		registration.
-	</p>
-	<p>
+	<p class="text-sm font-light">
 		If you register to the camp after the 17th of the June you will
 		only receive one fee request for the full amount. The same rules
 		will still apply.
@@ -82,8 +106,8 @@
 		Please note that all completed transactions are non-refundable!
 	</p>
 	<p>
-		For further information and answers to your potential questions
-		please see the <a href="/#faq">FAQ.</a>
+		For further information and answers to your questions please see
+		the <a href="/#faq">FAQ.</a>
 	</p>
 	<div class="mt-8">
 		<img
@@ -100,6 +124,150 @@
 			hot={true}
 		/>
 	</div>
+</div> -->
+<script>
+	import Icon from "@iconify/svelte";
+	import Link from "./Link.svelte";
+	import { roles } from "$lib";
+
+	let selectedRole = ""; // Default role, can be 'leavers' or 'alumni'
+</script>
+
+<div
+	class="mx-2 rounded-2xl border-4 border-gold-800 bg-gold-100 px-8 py-8"
+>
+	<h2>About the Leavers' Camp</h2>
+	<p>
+		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary,
+		scheduled for July 31st to August 4th, 2024, is <strong>
+			exclusively
+		</strong>
+		tailored for graduating students from Milestone who have
+		<strong>completed their senior year successfully</strong>
+		. However, Milestone alumni are also invited to join in.
+	</p>
+	<p>
+		At the Milestone Leavers' Camp, our primary aim is to foster
+		community, explore identity, and promote self-discovery among
+		participants. Throughout the program, attendees can expect a
+		variety of engaging activities, including games, workshops, the
+		official Milestone graduation ceremony (!) and other fun-filled
+		experiences.
+	</p>
+	<span>Select your role to see infos</span>
+	<fieldset class="mt-2 flex flex-row gap-4">
+		{#each roles.slice(0, 2) as role, i}
+			<div class="w-full">
+				<input
+					type="radio"
+					name="role"
+					value={role.value}
+					id={role.value}
+					class="peer hidden"
+					bind:group={selectedRole}
+				/>
+
+				<label
+					for={role.value}
+					class="role-label py-6"
+				>
+					<div class="">
+						<Icon
+							class="text-4xl text-gold-900"
+							icon={role.icon}
+						></Icon>
+					</div>
+					{role.label}
+					<span class="text-balance pt-2 text-sm">
+						Click for infos
+					</span>
+				</label>
+			</div>
+		{/each}
+	</fieldset>
+
+	<!-- Common section for both leavers and alumni -->
+	{#if selectedRole === "leaver"}
+		<h3>Camp Prices and Registration Details</h3>
+		<span>Camp prices for Leavers:</span>
+		<li>
+			For Milestone Seniors (Leavers): <strong>
+				60 000 Ft for the whole camp
+			</strong>
+		</li>
+
+		<span>Issued in two instalments:</span>
+		<li>
+			Deposit Instalment: 20 000 Ft (issued a few days after you
+			register)
+		</li>
+		<li>Remainder Instalment: 40 000 Ft (issued on June 17.)</li>
+
+		<span>This price includes:</span>
+		<li>Guaranteed indoor accommodation</li>
+		<li>Breakfast, lunch, and dinner</li>
+		<li>4 days of camp activities</li>
+		<li>An official Milestone hoodie</li>
+		<li>Transportation to and from the camp</li>
+	{/if}
+
+	{#if selectedRole === "alumni"}
+		<h3>Camp Prices and Registration Details</h3>
+		<span>Camp prices for alumni:</span>
+		<li>
+			For Milestone alumni: <strong>15 000 Ft per day</strong>
+		</li>
+		<li>
+			For Team leaders:
+			<strong>50 000 Ft for the whole camp</strong>
+		</li>
+
+		<span>Issued in two instalments:</span>
+		<li>
+			Deposit Instalment: 50% of the overall fee (issued a few days
+			after you register)
+		</li>
+		<li>
+			Remainder Instalment: 50% of the overall fee (issued on June
+			17.)
+		</li>
+
+		<span>This price includes:</span>
+		<li>Accommodation on camp grounds (indoors not guaranteed)</li>
+		<li>Breakfast, lunch, and dinner</li>
+		<li>Access to activities for both leavers and alumni</li>
+	{/if}
+	{#if selectedRole}
+		<span>Important!</span>
+		<li class="">
+			If you register to the camp after the 17th of June you will only
+			receive one fee request for the full amount. The same rules will
+			still apply.
+		</li>
+		<li>
+			Make sure to pay all fee requests within 3 days. If you don't,
+			we will immediately cancel your registration.
+		</li>
+		<li>Completed payments are non-refundable!</li>
+		<span>
+			For more infos please read the <a href="/#faq">FAQ</a>
+		</span>
+		<div class="mt-8">
+			<img
+				src="/leavers_photo_group.jpg"
+				alt=""
+				class="rounded-xl"
+			/>
+		</div>
+		<div class="mt-10 flex items-center justify-center">
+			<Link
+				href="/"
+				icon=""
+				text="Register Now!"
+				hot={true}
+			/>
+		</div>
+	{/if}
 </div>
 
 <style lang="postcss">
@@ -111,26 +279,22 @@
 	}
 
 	p {
-		@apply mt-4 font-normal;
+		@apply mt-4;
 	}
 
 	span {
 		@apply mt-4 block font-bold;
 	}
-	ul {
-		@apply list-disc;
-	}
 
-	ol {
-		@apply list-decimal;
-	}
-
-	ul,
-	ol {
-		@apply mt-2 list-inside;
+	li {
+		@apply mt-2;
 	}
 
 	a {
 		@apply underline;
+	}
+
+	.role-label {
+		@apply flex cursor-pointer flex-col items-center justify-center rounded-2xl border-4 bg-white px-6 text-center text-xl font-bold hover:border-gold-400 hover:bg-gold-100 hover:opacity-100 peer-checked:border-gold-900 peer-checked:bg-gold-300 peer-checked:opacity-100;
 	}
 </style>
