@@ -8,13 +8,23 @@
 	let slider;
 	let currentSlidePosition = 0;
 
+	onMount(() => {
+		if (slider) {
+			slider.addEventListener("scroll", updateSlidePosition);
+		}
+	});
+
+	function updateSlidePosition() {
+		currentSlidePosition = slider.scrollLeft;
+	}
+
 	$: nextDisabled = slider
 		? currentSlidePosition >= slider.scrollWidth - slider.clientWidth
 		: false;
 	$: prevDisabled = currentSlidePosition <= 0;
 
 	function slide(direction) {
-		const moveAmount = slider.clientWidth * 0.3;
+		const moveAmount = slider.clientWidth * 0.3; // Use slider's client width
 		if (
 			direction === "next" &&
 			currentSlidePosition < slider.scrollWidth - slider.clientWidth
@@ -34,7 +44,8 @@
 <div class="grid grid-cols-[auto,_1fr,auto]">
 	<div class="slider-button-wrapper">
 		<button
-			on:click={() => slide("prev")}
+			type="button"
+			on:click|stopPropagation|preventDefault={() => slide("prev")}
 			disabled={prevDisabled}
 			class="slider-button w-min"
 		>
@@ -42,7 +53,7 @@
 		</button>
 	</div>
 	<div
-		class="slider {hasGap ? 'gap-6' : ''}"
+		class="slider {hasGap ? 'gap-6' : ''} "
 		style=""
 		use:dragscroll
 		bind:this={slider}
@@ -51,7 +62,8 @@
 	</div>
 	<div class="slider-button-wrapper">
 		<button
-			on:click={() => slide("next")}
+			type="button"
+			on:click|stopPropagation|preventDefault={() => slide("next")}
 			disabled={nextDisabled}
 			class="slider-button w-min"
 		>
@@ -71,11 +83,6 @@
 	}
 
 	:global(.slider > *) {
-		/* Don't do it like this: */
-		/* flex: 0 0 45%; */
-
-		/* Instead specify it on the child element itself with tailwind classes: */
-		/* <div class="flex-[0_0_45%]"> ... </div> */
 		scroll-snap-align: center;
 	}
 

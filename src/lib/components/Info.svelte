@@ -85,6 +85,13 @@
 		For further information and answers to your potential questions
 		please see the <a href="/#faq">FAQ.</a>
 	</p>
+	<div class="mt-8">
+		<img
+			src="/leavers_photo_group.jpg"
+			alt=""
+			class="rounded-xl"
+		/>
+	</div>
 	<div class="mt-10 flex items-center justify-center">
 		<Link
 			href="/"

@@ -13,10 +13,17 @@
 	}
 
 	section {
-		@apply mx-auto mb-8 w-[min(100%,_60rem)] px-2;
+		@apply mx-auto mb-8 w-[min(100%,_60rem)] px-4;
 	}
 
 	.content a {
 		@apply text-gold-900 underline;
+	}
+
+	button,
+	a,
+	.checkbox-label,
+	.option-label {
+		@apply transition-all active:scale-95;
 	}
 }

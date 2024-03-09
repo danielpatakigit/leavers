@@ -1,9 +1,17 @@
 // place files you want to import through the `$lib` alias in this folder.
 export const testamonials = [
 	{
-		name: "Teodor Nikolov",
-		tag: "Class of 2021",
-		html: `<p>“Without a doubt, the biggest event of my Milestone career was the Leavers' Camp 2021, when I was successfully inducted into the Milestone Alumni community as a graduating student.</p> <p>Since then, I've been twice as an alumni and it's no surprise, as every year I make new memories in Milestone and it's one of my favorite events of the summer. During the camp there will be opportunities for fun, socializing, education and sports. An eventful camp is waiting for you, so get a good night's sleep!”</p>`,
+		name: "Ágnes Horváth",
+		tag: "Lead Educational Programme Designer",
+
+		html: `<p>“What is Leavers' Camp, you ask? Depending on who you ask, you will get a variety of answers. Leavers' Camp is...</p>
+			<li>your graduation from Milestone (ceremony and all)</li>
+			<li>the celebration of the end of one phase of your life (secondary / high school) and the start of the next</li>
+			<li>becoming part of the Milestone alumni community</li>
+			<li>trying to beat Ágnes at Codenames and Andor at Capture the Flag</li>
+			<li>great discussions until midnight and beyond</li>
+			<li>party!</li>
+		<p>Mark your calendars, keep an eye out for the registration form, and sharpen your minds / running skills. We are looking forward to having you there!”</p>`,
 	},
 	{
 		name: "Viktor Kisiván",
@@ -12,23 +20,15 @@ export const testamonials = [
 		html: `<p>“For me, the name Leavers' Camp feels like a misnomer in retrospect. Before then, I was never really involved in student life, and whilst the camp was an amazing final chapter to my Milestone experience, the social aspect of it all is only dawning on me now. I am now more involved in student life than ever before, and I do not feel as though I have left Milestone behind. </p> <p> If you feel nervous about going to the camp just like I was a year ago when signing up, please consider for a moment this picture of a sparkling clean toilet in the camp which is a great testimonial to how considerate and caring other leavers are and that you should definitely sign up!”</p>`,
 	},
 	{
+		name: "Teodor Nikolov",
+		tag: "Class of 2021",
+		html: `<p>“Without a doubt, the biggest event of my Milestone career was the Leavers' Camp 2021, when I was successfully inducted into the Milestone Alumni community as a graduating student.</p> <p>Since then, I've been twice as an alumni and it's no surprise, as every year I make new memories in Milestone and it's one of my favorite events of the summer. During the camp there will be opportunities for fun, socializing, education and sports. An eventful camp is waiting for you, so get a good night's sleep!”</p>`,
+	},
+	{
 		name: "Lilla Illés ",
 		tag: "",
 
 		html: `<p>“The leavers camp was a perfect ending to my Milestone academic career. This is where I realised that Milestone is more than an institute and that the alumni community is very close knit. The repeated class dance, evening bonfires and team games were definitely a highlight! </p> <p> And of course, the infamous last night...”</p>`,
-	},
-	{
-		name: "Ágnes Horváth",
-		tag: "Lead Educational Programme Designer",
-
-		html: `<p>“What is Leavers' Camp, you ask? Depending on who you ask, you will get a variety of answers. Leavers' Camp is...</p>
-            <li>your graduation from Milestone (ceremony and all)</li>
-            <li>the celebration of the end of one phase of your life (secondary / high school) and the start of the next</li>
-            <li>becoming part of the Milestone alumni community</li>
-            <li>trying to beat Ágnes at Codenames and Andor at Capture the Flag</li>
-            <li>great discussions until midnight and beyond</li>
-            <li>party!</li>
-        <p>Mark your calendars, keep an eye out for the registration form, and sharpen your minds / running skills. We are looking forward to having you there!”</p>`,
 	},
 ];
 

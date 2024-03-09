@@ -13,7 +13,6 @@ export async function updateUser(recordId, record) {
 	const userRecord = await pb
 		.collection("users")
 		.update(recordId, record);
-	console.log(user, "update user");
 	user.set(userRecord);
 }
 

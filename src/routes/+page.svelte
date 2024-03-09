@@ -53,15 +53,52 @@
 
 <section class="mt-24">
 	<Slider>
-		{#each Array(10) as _}
-			<div class="flex-[0_0_85%] md:flex-[0_0_45%]">
-				<img
-					src="/placeholder.png"
-					alt="placeholder"
-					class=""
-				/>
-			</div>
-		{/each}
+		<!-- <div class="flex-[0_0_85%] md:flex-[0_0_45%]">
+			<img
+				src="/placeholder.png"
+				alt="placeholder"
+				class=""
+			/>
+		</div> -->
+		<img
+			src="/leavers_photo_8.jpg"
+			alt="leavers_photo_8"
+		/>
+		<img
+			src="/leavers_photo_6.jpg"
+			alt="leavers_photo_6"
+		/>
+		<img
+			src="/leavers_photo_9.jpg"
+			alt="leavers_photo_9"
+		/>
+		<img
+			src="/leavers_photo_2.jpg"
+			alt="leavers_photo_2"
+		/>
+		<img
+			src="/leavers_photo_3.jpg"
+			alt="leavers_photo_3"
+		/>
+
+		<img
+			src="/leavers_photo_5.jpg"
+			alt="leavers_photo_5"
+		/>
+
+		<img
+			src="/leavers_photo_1.jpg"
+			alt="leavers_photo_1"
+		/>
+		<img
+			src="/leavers_photo_4.jpg"
+			alt="leavers_photo_4"
+		/>
+
+		<img
+			src="/leavers_photo_7.jpg"
+			alt="leavers_photo_7"
+		/>
 	</Slider>
 </section>
 <section class="mt-24">
