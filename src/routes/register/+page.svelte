@@ -6,12 +6,15 @@
 	import Link from "../../lib/components/Link.svelte";
 	import { roles, days, sizes } from "$lib";
 	import { confetti } from "@neoconfetti/svelte";
-
+	import Loader from "../../lib/components/Loader.svelte";
 	import { enhance } from "$app/forms";
 	import { fade, slide, blur } from "svelte/transition";
 
 	// export let data;
 	export let form;
+
+	let loading = false;
+	$: if (form?.success) loading = false;
 
 	let passwordError = "";
 	let password = "";
@@ -38,14 +41,22 @@
 	></Title>
 </section>
 {#if form?.success}
-	<div use:confetti></div>
 	<section class="">
+		<div
+			class="mx-auto"
+			use:confetti={{
+				particleCount: 120,
+				particleSize: 10,
+				duration: 4000,
+				destroyAfterDone: false,
+			}}
+		></div>
 		<Title
 			h1={true}
 			id="success"
 			tag="REGISTRATION status"
 			title="Successful Registration!"
-			subtitle="If you're seeing this that means that we have successfully received your registartion to Milestone Leavers' Camp 2024. Keep an eye out for incoming emails and don't forget to pay the fee requests to keep your place in the camp. Please also not that while the login feautre of this website is not completed yet, you'll be able to log in in the future with your email and password you've submitted in this form and see the details of your payments and registration information. "
+			subtitle="If you're seeing this that means that we have successfully received your registartion to Milestone Leavers' Camp 2024. Keep an eye out for incoming emails and don't forget to pay the fee requests to keep your place in the camp. Please also note that in the future you will be able to log in with your email and password you've submitted in this form and see the details of your payments, registration information and much more as the camp approaches."
 			backHref="/"
 			backText="Home"
 			forwardHref="/#faq"
@@ -394,8 +405,8 @@
 						<h6>
 							Would you like to add the Milestone hoodie to your registration?
 							<span>
-								A hoodie costs extra 8.000 Ft which we will be added to the
-								remainder part of your participation fee.
+								A hoodie costs extra 8 000 Ft which will be issued with the
+								remainder part of your base participation fee.
 							</span>
 							<fieldset class="radio-set">
 								<label
@@ -514,7 +525,7 @@
 						<label for="university">
 							Please specify the university you attended/attend/have chosen to
 							attend after leaving Milestone: <span>
-								By letting us know we can make sure that you can provide and/or
+								By letting us know we can make sure that you provide and/or
 								receive the most useful advice in the camp.
 							</span>
 							<input
@@ -572,7 +583,12 @@
 								taken in the camp could be used for advertising matters in the
 								future. The Institute's data handling policy is available at the
 								following link:
-								https://milestone-institute.org/milestone-institute-data-handling-policy/
+								<a
+									target="_blank"
+									href="https://milestone-institute.org/milestone-institute-data-handling-policy/"
+								>
+									https://milestone-institute.org/milestone-institute-data-handling-policy/
+								</a>
 							</li>
 							<li>
 								The Institute (Milestone Consulting Kft.) would like to stay in
@@ -580,7 +596,12 @@
 								community and to let me know about their events via newsletters.
 								The Institute's data handling policy is available at the
 								following link:
-								https://milestone-institute.org/milestone-institute-data-handling-policy/
+								<a
+									target="_blank"
+									href="https://milestone-institute.org/milestone-institute-data-handling-policy/"
+								>
+									https://milestone-institute.org/milestone-institute-data-handling-policy/
+								</a>
 								I can unsubscribe at any point.
 							</li>
 							<li>
@@ -589,8 +610,14 @@
 								acknowledge my consent for the camp organizers to revoke my
 								registration as per the policies stated on the camp website.
 								Additionally, I have familiarized myself with and agree to abide
-								by the house rules applicable to all participants during the
-								camp's duration.
+								by the <a
+									target="_blank"
+									href="/houserules"
+									class="underline"
+								>
+									house rules
+								</a>
+								applicable to all participants during the camp's duration.
 							</li>
 							<li>
 								While the organizers prioritize providing a safe experience at
@@ -619,8 +646,13 @@
 				{disabled}
 				type="submit"
 				class=" mt-4 w-full rounded-xl bg-gold-900 px-8 py-4 text-center text-lg font-bold text-white shadow-md hover:bg-gold-800"
+				on:click={() => (loading = true)}
 			>
-				Register
+				{#if loading}
+					<Loader></Loader>
+				{:else}
+					<span>Register</span>
+				{/if}
 			</button>
 		{/if}
 	</form>
@@ -662,6 +694,9 @@
 		@apply mt-2 flex cursor-pointer flex-row items-center gap-2 py-2 pr-4;
 	}
 
+	a {
+		@apply underline;
+	}
 	.checkbox-label {
 		@apply flex cursor-pointer flex-col items-center justify-center rounded-2xl border-4 px-6 text-center text-xl hover:border-gold-400 hover:bg-gold-100 hover:opacity-100 peer-checked:border-gold-900 peer-checked:bg-gold-300 peer-checked:font-bold peer-checked:opacity-100;
 	}

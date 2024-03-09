@@ -7,7 +7,7 @@
 		class=" gap mx-4 mt-4 flex w-[min(100%,_40rem)] items-center justify-between border-t border-zinc-100 px-4 pt-2"
 	>
 		<a
-			href=""
+			href="/"
 			class="flex items-center gap-1"
 		>
 			<div class="">
@@ -20,11 +20,17 @@
 		<div class="flex items-center gap-4 text-2xl">
 			<a
 				href="https://milestone-institute.org/hu/milestone-intezet-adatkezeles/"
+				target="_blank"
 				class="text-sm"
 			>
 				Privacy Policy
 			</a>
-			<a href="/"><Icon icon="mdi:instagram"></Icon></a>
+			<a
+				href="https://www.instagram.com/milestoneleaverscamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+				target="_blank"
+			>
+				<Icon icon="mdi:instagram"></Icon>
+			</a>
 		</div>
 	</div>
 </footer>

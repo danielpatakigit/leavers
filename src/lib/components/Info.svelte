@@ -1,158 +1,27 @@
-<!-- <script>
-	import Link from "./Link.svelte";
-</script>
-
-<div
-	class=" mx-2 rounded-2xl border-4 border-gold-800 bg-gold-100 px-8 py-8"
->
-	<h2>About the Leavers' Camp!</h2>
-	<p>
-		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary,
-		scheduled for July 31st to August 4th, 2024, is <strong>
-			exclusively
-		</strong>
-		tailored for graduating students from Milestone who have
-		<strong>completed their senior year successfully</strong>
-		. However, Milestone alumni are also invited to join in.
-	</p>
-	<p>
-		At the Milestone Leavers' Camp, our primary aim is to foster
-		community, explore identity, and promote self-discovery among
-		participants. Throughout the program, attendees can expect a
-		variety of engaging activities, including games, workshops, the
-		official Milestone graduation ceremony (!) and other fun-filled
-		experiences.
-	</p>
-
-	<h3>Camp prices</h3>
-	<ul>
-		<li>
-			For Milestone Seniors (Leavers): <strong>
-				60 000 Ft <u>for the whole camp</u>
-			</strong>
-		</li>
-		<br />
-		<li>
-			For Milestone Alumni: <strong>
-				15 000 Ft <u>per night</u>
-			</strong>
-		</li>
-		<i class="text-sm">
-			(With team leader discount: <strong>
-				12 500 Ft per night)
-			</strong>
-		</i>
-	</ul>
-
-	<span>These prices include:</span>
-	<ul>
-		<li>
-			Indoor accommodation guaranteed for leavers and optional for
-			alumni (see FAQ for details)
-		</li>
-		<li>Breakfast, lunch, and dinner</li>
-		<li>
-			Access to activities organized for both leavers and alumni
-		</li>
-		<li>
-			An official Milestone hoodie (included in the price for leavers,
-			optional for others)
-		</li>
-		<li>Transportation to and from the camp (only for leavers)</li>
-	</ul>
-
-	<h3>Registration & Payment Process</h3>
-	<span>1. Deposit Instalment:</span>
-	<ul>
-		<li>20 000 Ft for leavers and team leader alumni</li>
-		<li>50% of your registration fee for everybody else</li>
-	</ul>
-	<p>
-		After you've <a
-			class="font-bold"
-			href="/register"
-		>
-			registered
-		</a>
-		Milestone will send out a fee request per email for the
-		<strong>deposit instalment</strong>
-		of your registration fee.
-	</p>
-	<p class="italic">
-		Please make sure to pay this fee within 3 days after receiving it.
-		If you don't we will immediately cancel your registration.
-	</p>
-	<span>2. Remainder Instalment:</span>
-	<ul>
-		<li>The remaining 40 000 Ft for leavers</li>
-		<li>The remaining 30 000 Ft for team leader alumni</li>
-		<li>
-			The remaining 50% of your registration fee for everybody else
-		</li>
-		<li>(+ optional Milestone Hoodie for non-leavers)</li>
-	</ul>
-	<p>
-		The remainder instalment of your participation fee will be issued
-		to you on the 17th of June, exactly 6 weeks before the week of the
-		camp. Make sure to pay this instalment too within 3 days to keep
-		your registration.
-	</p>
-	<p class="text-sm font-light">
-		If you register to the camp after the 17th of the June you will
-		only receive one fee request for the full amount. The same rules
-		will still apply.
-	</p>
-	<p>
-		Please note that all completed transactions are non-refundable!
-	</p>
-	<p>
-		For further information and answers to your questions please see
-		the <a href="/#faq">FAQ.</a>
-	</p>
-	<div class="mt-8">
-		<img
-			src="/leavers_photo_group.jpg"
-			alt=""
-			class="rounded-xl"
-		/>
-	</div>
-	<div class="mt-10 flex items-center justify-center">
-		<Link
-			href="/"
-			icon=""
-			text="Register Now!"
-			hot={true}
-		/>
-	</div>
-</div> -->
 <script>
 	import Icon from "@iconify/svelte";
 	import Link from "./Link.svelte";
 	import { roles } from "$lib";
+	import { fade, slide } from "svelte/transition";
 
 	let selectedRole = ""; // Default role, can be 'leavers' or 'alumni'
 </script>
 
-<div
-	class="mx-2 rounded-2xl border-4 border-gold-800 bg-gold-100 px-8 py-8"
->
+<div class="mx-2 rounded-2xl border-4 border-gold-800 bg-gold-100 px-8 py-8">
 	<h2>About the Leavers' Camp</h2>
 	<p>
-		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary,
-		scheduled for July 31st to August 4th, 2024, is <strong>
-			exclusively
-		</strong>
+		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary, scheduled for
+		July 31st to August 4th, 2024, is <strong>exclusively</strong>
 		tailored for graduating students from Milestone who have
 		<strong>completed their senior year successfully</strong>
 		. However, Milestone alumni are also invited to join in.
 	</p>
 	<p>
-		At the Milestone Leavers' Camp, our primary aim is to foster
-		community, explore identity, and promote self-discovery among
-		participants. Throughout the program, attendees can expect a
-		variety of engaging activities, including games, workshops, the
-		official Milestone graduation ceremony (!) and other fun-filled
-		experiences.
+		At the Milestone Leavers' Camp, our primary aim is to foster community,
+		explore identity, and promote self-discovery among participants. Throughout
+		the program, attendees can expect a variety of engaging activities,
+		including games, workshops, the official Milestone graduation ceremony (!)
+		and other fun-filled experiences.
 	</p>
 	<span>Select your role to see infos</span>
 	<fieldset class="mt-2 flex flex-row gap-4">
@@ -178,9 +47,7 @@
 						></Icon>
 					</div>
 					{role.label}
-					<span class="text-balance pt-2 text-sm">
-						Click for infos
-					</span>
+					<span class="text-balance pt-2 text-sm">Click for infos</span>
 				</label>
 			</div>
 		{/each}
@@ -188,65 +55,62 @@
 
 	<!-- Common section for both leavers and alumni -->
 	{#if selectedRole === "leaver"}
-		<h3>Camp Prices and Registration Details</h3>
-		<span>Camp prices for Leavers:</span>
-		<li>
-			For Milestone Seniors (Leavers): <strong>
-				60 000 Ft for the whole camp
-			</strong>
-		</li>
-
-		<span>Issued in two instalments:</span>
-		<li>
-			Deposit Instalment: 20 000 Ft (issued a few days after you
-			register)
-		</li>
-		<li>Remainder Instalment: 40 000 Ft (issued on June 17.)</li>
-
-		<span>This price includes:</span>
-		<li>Guaranteed indoor accommodation</li>
-		<li>Breakfast, lunch, and dinner</li>
-		<li>4 days of camp activities</li>
-		<li>An official Milestone hoodie</li>
-		<li>Transportation to and from the camp</li>
+		<div>
+			<h3>Leaver Camp Prices and Registration Details</h3>
+			<span>Camp prices for Leavers:</span>
+			<li>
+				For Milestone Seniors (Leavers): <strong>
+					60 000 Ft for the whole camp
+				</strong>
+			</li>
+			<span>Issued in two instalments:</span>
+			<li>
+				Deposit Instalment: 20 000 Ft (issued a few days after you register)
+			</li>
+			<li>Remainder Instalment: 40 000 Ft (issued on June 17.)</li>
+			<span>This price includes:</span>
+			<li>Guaranteed indoor accommodation</li>
+			<li>Breakfast, lunch, and dinner</li>
+			<li>4 days of camp activities</li>
+			<li>An official Milestone hoodie</li>
+			<li>Transportation to and from the camp</li>
+		</div>
 	{/if}
 
 	{#if selectedRole === "alumni"}
-		<h3>Camp Prices and Registration Details</h3>
-		<span>Camp prices for alumni:</span>
-		<li>
-			For Milestone alumni: <strong>15 000 Ft per day</strong>
-		</li>
-		<li>
-			For Team leaders:
-			<strong>50 000 Ft for the whole camp</strong>
-		</li>
+		<div>
+			<h3>Alumni Camp Prices and Registration Details</h3>
+			<span>Camp prices for alumni:</span>
+			<li>
+				For Milestone alumni: <strong>15 000 Ft per day</strong>
+			</li>
+			<li>
+				For Team leaders:
+				<strong>50 000 Ft for the whole camp</strong>
+			</li>
 
-		<span>Issued in two instalments:</span>
-		<li>
-			Deposit Instalment: 50% of the overall fee (issued a few days
-			after you register)
-		</li>
-		<li>
-			Remainder Instalment: 50% of the overall fee (issued on June
-			17.)
-		</li>
+			<span>Issued in two instalments:</span>
+			<li>
+				Deposit Instalment: 50% of the overall fee (issued a few days after you
+				register)
+			</li>
+			<li>Remainder Instalment: 50% of the overall fee (issued on June 17.)</li>
 
-		<span>This price includes:</span>
-		<li>Accommodation on camp grounds (indoors not guaranteed)</li>
-		<li>Breakfast, lunch, and dinner</li>
-		<li>Access to activities for both leavers and alumni</li>
+			<span>This price includes:</span>
+			<li>Accommodation on camp grounds (indoors not guaranteed)</li>
+			<li>Breakfast, lunch, and dinner</li>
+			<li>Access to activities for both leavers and alumni</li>
+		</div>
 	{/if}
 	{#if selectedRole}
 		<span>Important!</span>
 		<li class="">
-			If you register to the camp after the 17th of June you will only
-			receive one fee request for the full amount. The same rules will
-			still apply.
+			If you register to the camp after the 17th of June you will only receive
+			one fee request for the full amount. The same rules will still apply.
 		</li>
 		<li>
-			Make sure to pay all fee requests within 3 days. If you don't,
-			we will immediately cancel your registration.
+			Make sure to pay all fee requests within 3 days. If you don't, we will
+			immediately cancel your registration.
 		</li>
 		<li>Completed payments are non-refundable!</li>
 		<span>
@@ -261,7 +125,7 @@
 		</div>
 		<div class="mt-10 flex items-center justify-center">
 			<Link
-				href="/"
+				href="/register"
 				icon=""
 				text="Register Now!"
 				hot={true}

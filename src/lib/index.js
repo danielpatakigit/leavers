@@ -44,7 +44,7 @@ export const faq = [
 	},
 	{
 		question: "Who is organizing the camp?",
-		html: `<p>The camp is organized by motivated Milestone alumni volunteers, who bring their passion and dedication to the event each year. Additionally, Milestone staff members provide assistance and support to ensure the smooth running of the camp. Together, this collaborative effort ensures a fulfilling and memorable experience for all participants. You can find the list of this years organizers <a href="#">here</a>.</p>`,
+		html: `<p>The camp is organized by motivated Milestone alumni volunteers, who bring their passion and dedication to the event each year. Additionally, Milestone staff members provide assistance and support to ensure the smooth running of the camp. Together, this collaborative effort ensures a fulfilling and memorable experience for all participants. You can find the list of this years organizers <a href="/organizers">here</a>.</p>`,
 	},
 	{
 		question:
@@ -53,7 +53,7 @@ export const faq = [
 	},
 	{
 		question: "Where can I read the house rules?",
-		html: `<p>You can find the house rules <a href="#">here</a>. Please ensure you have read and understood these rules, as well as the consequences for breaking them. This is a required step of the registration process.</p>`,
+		html: `<p>You can find the house rules <a href="/houserules">here</a>. Please ensure you have read and understood these rules, as well as the consequences for breaking them. This is a required step of the registration process.</p>`,
 	},
 ];
 
@@ -131,94 +131,45 @@ export const organizers = [
 		img: "placeholder.png",
 	},
 ];
-
 export const rules = [
 	{
 		name: "Rules for all",
-		html: `<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-	</p>
-	<li>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-		dicta commodi voluptate obcaecati, doloremque eum perferendis
-		provident sed voluptates non eveniet unde! Corporis beatae, vel
-		voluptate exercitationem reprehenderit nesciunt dicta!
-	</li>
-	<li>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-		dicta commodi voluptate obcaecati, doloremque eum perferendis
-		provident sed voluptates non eveniet unde! Corporis beatae, vel
-		voluptate exercitationem reprehenderit nesciunt dicta!
-	</li><li>
-	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-	dicta commodi voluptate obcaecati, doloremque eum perferendis
-	provident sed voluptates non eveniet unde! Corporis beatae, vel
-	voluptate exercitationem reprehenderit nesciunt dicta!
-</li>
-
-<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-	</p><p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-</p>`,
+		html: `
+            <ul>
+                <li>No smoking indoors, please use the designated outdoor smoking areas.</li>
+                <li>If consuming alcohol, do so responsibly and with moderation. Alcohol consumption is only allowed in designated areas, no drinking in the sleeping lodges.</li>
+                <li>There is no strict curfew, but respect the designated quiet hours to ensure everyone gets adequate rest.</li>
+                <li>Be conscious of your environment, dispose of waste responsibly, use recycling bins, and contribute to keeping the Csórompuszta grounds clean.</li>
+                <li>Treat facilities with care and report any damage or issues to the Organizing Committee promptly.</li>
+                <li>Respect the schedule to ensure the smooth flow of activities and maximize the overall experience for all participants.</li>
+            </ul>
+        `,
 	},
 	{
 		name: "Rules for Leavers",
-		html: `<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-	</p>
-	<li>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-		dicta commodi voluptate obcaecati, doloremque eum perferendis
-		provident sed voluptates non eveniet unde! Corporis beatae, vel
-		voluptate exercitationem reprehenderit nesciunt dicta!
-	</li>
-	<li>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-		dicta commodi voluptate obcaecati, doloremque eum perferendis
-		provident sed voluptates non eveniet unde! Corporis beatae, vel
-		voluptate exercitationem reprehenderit nesciunt dicta!
-	</li><li>
-	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-	dicta commodi voluptate obcaecati, doloremque eum perferendis
-	provident sed voluptates non eveniet unde! Corporis beatae, vel
-	voluptate exercitationem reprehenderit nesciunt dicta!
-</li>
-
-<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-	</p><p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-</p>`,
+		html: `
+            <ul>
+                <li>Do not leave the Csórompuszta grounds for any reason.</li>
+                <li>Leavers must arrive and depart from the Leavers’ Camp with the group, unless exceptional circumstances arise. In such cases, prior approval must be obtained from the Organising Committee.</li>
+                <li>All Leavers are expected to engage in scheduled camp activities. Active participation will help you make the most of the learning and networking opportunities in the camp!</li>
+                <li>Participants are encouraged to promptly report any concerns, issues, or emergencies to the Participation and Communication Team. This includes, but is not limited to personal challenges, special requests, or well-being concerns.</li>
+                <li>Your welfare officer is Vyvy, she will be your primary point of contact to provide assistance, guidance, and a confidential space for participants to address their individual needs.</li>
+                <li>Feel free to approach other members of the Participation and Communication Team too, Mimi, Isu, and Kami are all happy to respond to concerns and questions.</li>
+                <li>Disclose any medical or dietary needs to the Organizer Committee during the sign-up process, so we can make sure to accommodate these.</li>
+            </ul>
+        `,
 	},
 	{
 		name: "Rules for Non-Leavers",
-		html: `<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-	</p>
-	<li>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-		dicta commodi voluptate obcaecati, doloremque eum perferendis
-		provident sed voluptates non eveniet unde! Corporis beatae, vel
-		voluptate exercitationem reprehenderit nesciunt dicta!
-	</li>
-	<li>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-		dicta commodi voluptate obcaecati, doloremque eum perferendis
-		provident sed voluptates non eveniet unde! Corporis beatae, vel
-		voluptate exercitationem reprehenderit nesciunt dicta!
-	</li><li>
-	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-	dicta commodi voluptate obcaecati, doloremque eum perferendis
-	provident sed voluptates non eveniet unde! Corporis beatae, vel
-	voluptate exercitationem reprehenderit nesciunt dicta!
-</li>
-
-<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-	</p><p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, in?
-</p>`,
+		html: `
+            <ul>
+                <li>Non-leavers should respect the camp's focus on the Leavers' experience.</li>
+                <li>Avoid actions that may detract from their engagement.</li>
+                <li>Do not encourage them to leave the Csórompuszta grounds.</li>
+                <li>Non-leavers are expected to model responsible behavior, especially in areas such as alcohol consumption and adherence to all camp rules to set a positive example for leavers.</li>
+                <li>Non-leavers should respect the decisions and guidance provided by the Organizing Committee and Lead Organizer.</li>
+            </ul>
+        `,
 	},
 ];
 

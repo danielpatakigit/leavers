@@ -20,9 +20,7 @@
 	></Title>
 </section>
 <section class="mt-24">
-	<div
-		class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6"
-	>
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
 		{#each organizers as content}
 			<OrganizerCard {content}></OrganizerCard>
 		{/each}
@@ -48,13 +46,13 @@
 			hot={true}
 		/>
 		<Link
-			href=""
+			href="/houserules"
 			icon="mdi:house"
 			text="House Rules"
 			hot={false}
 		/>
 		<Link
-			href=""
+			href="https://www.instagram.com/milestoneleaverscamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
 			icon="mdi:instagram"
 			text="@milestoneleaverscamp"
 			hot={false}

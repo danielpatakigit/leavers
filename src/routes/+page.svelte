@@ -19,9 +19,7 @@
 		</span>
 	</h1>
 	<p class="mt-4 text-balance text-center">
-		Embark on a journey of community, discovery, <br
-			class="hidden md:block"
-		/>
+		Embark on a journey of community, discovery, <br class="hidden md:block" />
 		and celebration as we pave the way for your next chapter.
 	</p>
 	<div class="mt-8 flex flex-col items-center text-center">
@@ -43,7 +41,7 @@
 			hot={false}
 		/>
 		<Link
-			href="/"
+			href="/register"
 			icon=""
 			text="Register"
 			hot={true}
@@ -165,7 +163,7 @@
 <section>
 	<div class="flex flex-col items-center gap-4">
 		<Link
-			href=""
+			href="/houserules"
 			icon="mdi:house"
 			text="House Rules"
 			hot={false}
@@ -177,7 +175,7 @@
 			hot={false}
 		/>
 		<Link
-			href=""
+			href="https://www.instagram.com/milestoneleaverscamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
 			icon="mdi:instagram"
 			text="@milestoneleaverscamp"
 			hot={true}
