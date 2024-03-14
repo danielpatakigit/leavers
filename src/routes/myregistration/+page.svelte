@@ -32,7 +32,7 @@
 		id="success"
 		tag="REGISTRATION status"
 		title="Successful Registration!"
-		subtitle="If you're seeing this, that means we have successfully received your registration for Milestone Leavers' Camp 2024. Keep an eye out for incoming emails and don't forget to pay the fee requested to secure your place in the camp. "
+		subtitle="If you're seeing this, that means we have successfully received your registration for Milestone Leavers' Camp 2024. Keep an eye out for incoming emails and don't forget to pay the fee requests to keep your place in the camp. "
 		backHref="/"
 		backText="Home"
 		forwardHref="/"
