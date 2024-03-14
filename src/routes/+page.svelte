@@ -87,7 +87,7 @@
 		h1={false}
 		id="faq"
 		tag="FAQ"
-		title="You have some questions?"
+		title="Do you have any questions?"
 		subtitle="You might find an answer to it below, if not, make sure to get in contact with us as soon as possible"
 	></Title>
 </section>

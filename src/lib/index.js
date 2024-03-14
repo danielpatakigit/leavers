@@ -15,7 +15,7 @@ export const testimonials = [
 	},
 	{
 		name: "Viktor Kisiván",
-		tag: "",
+		tag: "Class of 2023",
 
 		html: `<p>“For me, the name Leavers' Camp feels like a misnomer in retrospect. Before then, I was never really involved in student life, and whilst the camp was an amazing final chapter to my Milestone experience, the social aspect of it all is only dawning on me now. I am now more involved in student life than ever before, and I do not feel as though I have left Milestone behind. </p> <p> If you feel nervous about going to the camp just like I was a year ago when signing up, please consider for a moment this picture of a sparkling clean toilet in the camp which is a great testimonial to how considerate and caring other leavers are and that you should definitely sign up!”</p>`,
 	},
@@ -26,7 +26,7 @@ export const testimonials = [
 	},
 	{
 		name: "Lilla Illés ",
-		tag: "",
+		tag: "Class of 2023",
 
 		html: `<p>“The leavers camp was a perfect ending to my Milestone academic career. This is where I realised that Milestone is more than an institute and that the alumni community is very close knit. The repeated class dance, evening bonfires and team games were definitely a highlight! </p> <p> And of course, the infamous last night...”</p>`,
 	},
@@ -40,12 +40,12 @@ export const faq = [
 	},
 	{
 		question: "I have a general question. Who do I reach out to?",
-		html: `<p>The quickest way of directly contacting the organizers is by writing to <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a>. Furthermore, it's also worth considering reaching out to the Head of Seniors or Erzsébet Dúcz, the Student Life Coordinator (<a href="mailto:erzsebet.ducz@msinst.org">erzsebet.ducz@msinst.org</a>)</p>`,
+		html: `<p>The quickest way of directly contacting the organizers is by writing to <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a>. Consider reaching out to the Head of Seniors, Akin Cihan Erdost, or Erzsébet Dúcz (<a href="mailto:erzsebet.ducz@msinst.org">erzsebet.ducz@msinst.org</a>), the Student Life Coordinator.</p>`,
 	},
 	{
 		question:
 			"I am scared everyone attending the camp will already be friends and I will feel left out - should I still attend the camp if I am not involved in the community?",
-		html: `<p>We understand that it might seem intimidating to join the camp if you do not know many people from your cohort. Please be rest assured that the group activities will help you meet new people and form new friendships, so you will not feel left out! A Welfare Officer will also be present at the camp to ensure everyone has a comfortable experience.</p>`,
+		html: `<p>We understand that it might seem intimidating to join the camp if you barely know any people from your cohort. Please rest assured that the group activities will help you meet new people and form new friendships, so you will not feel left out! A Welfare Officer will also be present at the camp to ensure everyone has a comfortable experience.</p>`,
 	},
 	{
 		question: "How does the allocation of indoor places work exactly?",
@@ -145,7 +145,7 @@ export const rules = [
 		html: `
             <ul>
                 <li>No smoking indoors, please use the designated outdoor smoking areas.</li>
-                <li>If consuming alcohol, do so responsibly and with moderation. Alcohol consumption is only allowed in designated areas, no drinking in the sleeping lodges.</li>
+                <li>If consuming alcohol, do so responsibly and in moderation. Alcohol consumption is only allowed in designated areas, no drinking in the sleeping lodges.</li>
                 <li>There is no strict curfew, but respect the designated quiet hours to ensure everyone gets adequate rest.</li>
                 <li>Be conscious of your environment, dispose of waste responsibly, use recycling bins, and contribute to keeping the Csórompuszta grounds clean.</li>
                 <li>Treat facilities with care and report any damage or issues to the Organizing Committee promptly.</li>
@@ -172,8 +172,8 @@ export const rules = [
 		html: `
             <ul>
                 <li>Non-leavers should respect the camp's focus on the Leavers' experience.</li>
-                <li>Avoid actions that may detract from their engagement.</li>
-                <li>Do not encourage them to leave the Csórompuszta grounds.</li>
+                <li>Avoid actions that may distract leavers from their engagement.</li>
+                <li>Do not encourage leavers to leave the Csórompuszta grounds.</li>
                 <li>Non-leavers are expected to model responsible behavior, especially in areas such as alcohol consumption and adherence to all camp rules to set a positive example for leavers.</li>
                 <li>Non-leavers should respect the decisions and guidance provided by the Organizing Committee and Lead Organizer.</li>
             </ul>

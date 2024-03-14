@@ -179,7 +179,7 @@
 					Medical Conditions
 					<small>
 						If you think that it’s import for the organizers to know about any
-						existing conditions please them know.
+						existing conditions please let them know.
 					</small>
 					<input type="text" name="medical" id="medical" />
 				</label>

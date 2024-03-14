@@ -16,15 +16,15 @@
 		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary, scheduled for
 		July 31st to August 4th, 2024, is <strong>exclusively</strong>
 		tailored for graduating students from Milestone who have
-		<strong>completed their senior year successfully</strong>
-		. However, Milestone alumni are also invited to join in.
+		<strong>successfully completed their senior year.</strong>
+		However, Milestone alumni are also invited to join.
 	</p>
 	<p>
 		At the Milestone Leavers' Camp, our primary aim is to foster community,
 		explore identity, and promote self-discovery among participants. Throughout
-		the program, attendees can expect a variety of engaging activities,
-		including games, workshops, the official Milestone graduation ceremony (!)
-		and other fun-filled experiences.
+		the program, attendees can expect a variety of engaging activities including
+		games, workshops, the official Milestone graduation ceremony (!) and other
+		fun-filled experiences.
 	</p>
 	<h3 class="text-center">Select your role in Milestone to see details</h3>
 	<fieldset class="mt-2 flex flex-row gap-4">
@@ -62,7 +62,7 @@
 			<li>
 				Deposit Instalment: 20 000 Ft (issued a few days after you register)
 			</li>
-			<li>Remainder Instalment: 40 000 Ft (issued on June 17.)</li>
+			<li>Remainder Instalment: 40 000 Ft (issued on June 17)</li>
 			<span>This price includes:</span>
 			<li>Guaranteed indoor accommodation</li>
 			<li>Breakfast, lunch, and dinner</li>
@@ -90,12 +90,14 @@
 				Deposit Instalment: 50% of the overall fee (issued a few days after you
 				register)
 			</li>
-			<li>Remainder Instalment: 50% of the overall fee (issued on June 17.)</li>
+			<li>Remainder Instalment: 50% of the overall fee (issued on June 17)</li>
 
 			<span>This price includes:</span>
 			<li>Accommodation on camp grounds (indoors not guaranteed)</li>
 			<li>Breakfast, lunch, and dinner</li>
-			<li>Access to activities for both leavers and alumni</li>
+			<li>Access to all camp activites</li>
+			<li>A chance to partake in an exclusive alumni only event</li>
+			<li>The opportunity to reconnect with the Milestone community</li>
 		</div>
 	{/if}
 	{#if selectedRole}

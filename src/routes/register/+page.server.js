@@ -47,7 +47,7 @@ export const actions = {
 				password,
 				passwordConfirm,
 				name: `${givenName} ${familyName}`,
-				avatarURL: null,
+				admin: false,
 				familyName,
 				givenName,
 			};
