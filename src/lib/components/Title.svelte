@@ -8,10 +8,10 @@
 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum dolores ipsum dolore deleniti natus voluptatum blanditiis iure!";
 	export let tag = "Lorem ipsum";
 
-	export let backHref = "";
-	export let backText = "";
-	export let forwardHref = "";
-	export let forwardText = "";
+	export let backHref = null;
+	export let backText = null;
+	export let forwardHref = null;
+	export let forwardText = null;
 </script>
 
 <div class="flex flex-col items-center text-center">
@@ -39,7 +39,7 @@
 		{/if}
 	</div>
 	<h3 class="mt-4 text-balance font-sans text-3xl font-bold">{title}</h3>
-	<p class="mt-2 text-balance text-lg">{subtitle}</p>
+	<p class="mt-2 text-balance text-base md:text-lg">{subtitle}</p>
 </div>
 
 <style lang="postcss">

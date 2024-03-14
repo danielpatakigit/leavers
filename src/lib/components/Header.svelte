@@ -5,7 +5,7 @@
 
 <header class="fixed top-0 z-50 flex w-full justify-center">
 	<div
-		class=" gap flex w-[min(100%,_50rem)] items-center justify-between border border-zinc-100 bg-white px-4 shadow-xl md:mx-4 md:mt-2 md:rounded-xl"
+		class=" gap flex w-[min(100%,_50rem)] items-center justify-between border border-zinc-100 bg-white px-1 shadow-xl md:mx-4 md:mt-2 md:rounded-xl md:px-4"
 	>
 		<a href="/" class="flex items-center gap-1">
 			<div class="w-16">
@@ -16,6 +16,7 @@
 				<span class="text-sm">
 					{#if data?.user?.name}
 						<span class="font-light italic">Using as:</span>
+						<br class="md:hidden" />
 						<span class="font-bold text-gold-900">{data?.user?.name}</span>
 					{:else}
 						<span>Leavers' Camp</span>
@@ -29,11 +30,8 @@
 					href="/myregistration"
 					icon="solar:paperclip-linear"
 					text="My Registration"
-					hot={false}
+					hot={true}
 				/>
-				<form action="/logout" method="post">
-					<button class="hot-link-style-button" type="submit">Logout</button>
-				</form>
 			{:else}
 				<!-- <Link href="/" icon="" text="Home" hot={false} /> -->
 				<Link href="/login" icon="" text="Login" hot={false} />
@@ -44,10 +42,6 @@
 </header>
 
 <style lang="postcss">
-	.hot-link-style-button {
-		@apply flex items-center gap-1 rounded-lg bg-gold-900 px-4 py-1 text-center text-lg font-bold text-white shadow-md hover:bg-gold-800;
-	}
-
 	header {
 		view-transition-name: header;
 	}

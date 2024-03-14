@@ -3,6 +3,8 @@
 	import { organizers } from "$lib";
 	import OrganizerCard from "../../lib/components/OrganizerCard.svelte";
 	import Link from "../../lib/components/Link.svelte";
+	import { fade, fly, slide } from "svelte/transition";
+	import { elasticIn, quintOut } from "svelte/easing";
 
 	export let data;
 </script>
@@ -23,8 +25,18 @@
 </section>
 <section class="mt-24">
 	<div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-		{#each organizers as content}
-			<OrganizerCard {content}></OrganizerCard>
+		{#each organizers as content, i}
+			<div
+				in:fly|global={{
+					delay: 250 * i,
+					duration: 400,
+					x: 0,
+					y: 100,
+					opacity: 0,
+				}}
+			>
+				<OrganizerCard {content}></OrganizerCard>
+			</div>
 		{/each}
 	</div>
 </section>

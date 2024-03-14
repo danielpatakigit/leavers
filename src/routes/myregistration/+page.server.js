@@ -19,6 +19,7 @@ async function queryPayments(locals) {
 	const paymentsResult = await locals.pb.collection("payments").getList(1, 10, {
 		filter: `user="${locals.user.id}"`,
 	});
+	console.log(paymentsResult);
 	return paymentsResult.items;
 }
 

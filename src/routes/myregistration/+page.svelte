@@ -77,11 +77,19 @@
 					</tr>
 					<tr>
 						<td>Date of Issue</td>
-						<td>{payment.issue || "Not issued yet"}</td>
+						<td>
+							{(payment.issued &&
+								new Date(payment.issued).toLocaleDateString("hu-HU")) ||
+								"Not issued yet"}
+						</td>
 					</tr>
 					<tr>
 						<td>Date of Completion</td>
-						<td>{payment.payed || "Not completed yet"}</td>
+						<td>
+							{(payment.payed &&
+								new Date(payment.payed).toLocaleDateString("hu-HU")) ||
+								"Not completed yet"}
+						</td>
 					</tr>
 				</tbody>
 			{/each}
@@ -118,7 +126,11 @@
 				</tr>
 				<tr>
 					<td>Date of Registration</td>
-					<td>{data.user.created}</td>
+					<td>
+						{(data.user.created &&
+							new Date(data.user.created).toLocaleDateString("hu-HU")) ||
+							"Not registered yet"}
+					</td>
 				</tr>
 			</tbody>
 
@@ -140,8 +152,12 @@
 					</tr>
 					{#if submission.role !== "leaver"}
 						<tr>
-							<td>Also Team Leader</td>
-							<td>{submission.wantsTeamLeader ? "yes" : "no"}</td>
+							<td>Team Leader Role</td>
+							<td>
+								{submission.wantsTeamLeader
+									? "Yes, wants to be team leader"
+									: "No, doesn't want to be team leader"}
+							</td>
 						</tr>
 						{#if submission.wantsTeamLeader}
 							<tr>
@@ -153,7 +169,7 @@
 					{#if submission.role !== "leaver"}
 						<tr>
 							<td>Ordered Extra Hoodie</td>
-							<td>{submission.wantsHoodie ? "yes" : "no"}</td>
+							<td>{submission.wantsHoodie ? "Yes" : "No"}</td>
 						</tr>
 					{/if}
 
@@ -171,7 +187,7 @@
 						<td>Duration of Stay</td>
 						<td>
 							{submission.durationOfStay.length >= 4
-								? "All week"
+								? "Whole Duration (Wednesday - Sunday)"
 								: submission.durationOfStay.join(", ")}
 						</td>
 					</tr>
@@ -253,7 +269,7 @@
 		@apply bg-zinc-100 font-semibold;
 	}
 	tr {
-		@apply grid grid-cols-2 md:grid-cols-[20rem,_1fr];
+		@apply grid grid-cols-2 break-words md:grid-cols-[20rem,_1fr];
 	}
 
 	tbody {

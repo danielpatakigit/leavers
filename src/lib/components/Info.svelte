@@ -8,7 +8,9 @@
 	let selectedRole = ""; // Default role, can be 'leavers' or 'alumni'
 </script>
 
-<div class="mx-2 rounded-2xl border-4 border-gold-800 bg-gold-100 px-8 py-8">
+<div
+	class=" rounded-2xl border-4 border-gold-800 bg-gold-100 px-6 py-8 md:px-8"
+>
 	<h2>About the Leavers' Camp</h2>
 	<p>
 		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary, scheduled for
@@ -53,9 +55,8 @@
 			<h3>Leaver Camp Prices and Registration Details</h3>
 			<span>Camp prices for Leavers:</span>
 			<li>
-				For Milestone Seniors (Leavers): <strong>
-					60 000 Ft for the whole camp
-				</strong>
+				For Milestone Seniors (Leavers): <br class="md:hidden" />
+				<strong>60 000 Ft for the whole camp</strong>
 			</li>
 			<span>Issued in two instalments:</span>
 			<li>
@@ -76,10 +77,11 @@
 			<h3>Alumni Camp Prices and Registration Details</h3>
 			<span>Camp prices for alumni:</span>
 			<li>
-				For Milestone alumni: <strong>15 000 Ft per day</strong>
+				For Milestone alumni: <br class="md:hidden" />
+				<strong>15 000 Ft per day</strong>
 			</li>
 			<li>
-				For Team leaders:
+				For Team leaders: <br class="md:hidden" />
 				<strong>50 000 Ft for the whole camp</strong>
 			</li>
 

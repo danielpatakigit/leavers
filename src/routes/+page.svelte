@@ -27,10 +27,10 @@
 	</p>
 	<div class="mt-8 flex flex-col items-center text-center">
 		<span class="font-bold">July 31st - August 4th</span>
-		<a href="/" class="flex w-min items-center gap-1 underline">
+		<div class="mt-2 flex items-center gap-1">
 			<Icon icon="mdi-location"></Icon>
 			<span class="">Csórompuszta</span>
-		</a>
+		</div>
 		<span class="mt-2 text-xs">For Seniors & Alumni</span>
 	</div>
 	<div class="mt-10 flex gap-4">

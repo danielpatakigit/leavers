@@ -73,7 +73,7 @@ export const organizers = [
 		img: "organizers/Eleonóra_Bolhuis.jpeg",
 	},
 	{
-		name: "Aliz Hárs",
+		name: "Alíz Hárs",
 		tag: "Sponsorships Coordinator",
 		img: "organizers/Aliz_Hárs.jpg",
 	},
@@ -120,7 +120,7 @@ export const organizers = [
 	},
 	{
 		name: "Dániel Pataki",
-		tag: "Head of Finance and Logistics",
+		tag: "Head of Finance and Logistics, Website Developer",
 		img: "organizers/Dániel_Pataki.jpg",
 	},
 	{
@@ -158,7 +158,7 @@ export const rules = [
 		html: `
             <ul>
                 <li>Do not leave the Csórompuszta grounds for any reason.</li>
-                <li>Leavers must arrive and depart from the Leavers’ Camp with the group, unless exceptional circumstances arise. In such cases, prior approval must be obtained from the Organising Committee.</li>
+                <li>Leavers must arrive and depart from the Leavers’ Camp with the group, unless exceptional circumstances arise. In such cases, prior approval must be obtained from the Organizing Committee.</li>
                 <li>All Leavers are expected to engage in scheduled camp activities. Active participation will help you make the most of the learning and networking opportunities in the camp!</li>
                 <li>Participants are encouraged to promptly report any concerns, issues, or emergencies to the Participation and Communication Team. This includes, but is not limited to personal challenges, special requests, or well-being concerns.</li>
                 <li>Your welfare officer is Vyvy, she will be your primary point of contact to provide assistance, guidance, and a confidential space for participants to address their individual needs.</li>

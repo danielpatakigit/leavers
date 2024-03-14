@@ -28,4 +28,4 @@
 </svelte:head>
 <Header {data}></Header>
 <slot />
-<Footer></Footer>
+<Footer {data}></Footer>
