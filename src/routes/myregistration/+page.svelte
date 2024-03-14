@@ -1,8 +1,9 @@
 <script>
 	import { confetti } from "@neoconfetti/svelte";
 	import Title from "../../lib/components/Title.svelte";
-	import { fade } from "svelte/transition";
+	import { fade, slide } from "svelte/transition";
 	import { onMount } from "svelte";
+	import Loader from "../../lib/components/Loader.svelte";
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -42,166 +43,193 @@
 
 <section class="mt-36">
 	<h2>Camp Fees</h2>
-	<table class="">
-		<!-- <thead>
+	{#await data.payments}
+		<div class="mt-6 flex items-center justify-center space-x-2" in:fade>
+			<span class="sr-only">Loading...</span>
+			<div
+				class="h-4 w-4 animate-bounce rounded-full bg-gold-900 [animation-delay:-0.3s]"
+			></div>
+			<div
+				class="h-4 w-4 animate-bounce rounded-full bg-gold-900 [animation-delay:-0.15s]"
+			></div>
+			<div class="h-4 w-4 animate-bounce rounded-full bg-gold-900"></div>
+		</div>
+	{:then payments}
+		<table class="" transition:slide>
+			<!-- <thead>
 			<tr>
 				<th>Label</th>
 				<th>Value</th>
 			</tr>
 		</thead> -->
-		{#each data.payments as payment}
+
+			{#each payments as payment}
+				<tbody>
+					<tr>
+						<td>Type/Name</td>
+						<td>
+							{payment.type === "remainder"
+								? payment.extraHoodieIncluded
+									? "Remainder + Milestone Hoodie"
+									: "Remainder"
+								: "Deposit"}
+						</td>
+					</tr>
+					<tr>
+						<td>Amount</td>
+						<td>{payment.amount} Ft</td>
+					</tr>
+					<tr>
+						<td>Date of Issue</td>
+						<td>{payment.issue || "Not issued yet"}</td>
+					</tr>
+					<tr>
+						<td>Date of Completion</td>
+						<td>{payment.payed || "Not completed yet"}</td>
+					</tr>
+				</tbody>
+			{/each}
+		</table>
+	{/await}
+	<h2>Registration Details</h2>
+	{#await data.submissions}
+		<div class="mt-6 flex items-center justify-center space-x-2" in:fade>
+			<span class="sr-only">Loading...</span>
+			<div
+				class="h-4 w-4 animate-bounce rounded-full bg-gold-900 [animation-delay:-0.3s]"
+			></div>
+			<div
+				class="h-4 w-4 animate-bounce rounded-full bg-gold-900 [animation-delay:-0.15s]"
+			></div>
+			<div class="h-4 w-4 animate-bounce rounded-full bg-gold-900"></div>
+		</div>
+	{:then submissions}
+		<table class="" transition:slide>
+			<!-- <thead>
+			<tr>
+				<th>Label</th>
+				<th>Value</th>
+			</tr>
+		</thead> -->
 			<tbody>
 				<tr>
-					<td>Type/Name</td>
-					<td>
-						{payment.type === "remainder"
-							? payment.extraHoodieIncluded
-								? "Remainder + Milestone Hoodie"
-								: "Remainder"
-							: "Deposit"}
-					</td>
+					<td>Full Name</td>
+					<td>{data.user.name}</td>
 				</tr>
 				<tr>
-					<td>Amount</td>
-					<td>{payment.amount} Ft</td>
+					<td>Email</td>
+					<td>{data.user.email}</td>
 				</tr>
 				<tr>
-					<td>Date of Issue</td>
-					<td>{payment.issue || "Not issued yet"}</td>
-				</tr>
-				<tr>
-					<td>Date of Completion</td>
-					<td>{payment.payed || "Not completed yet"}</td>
+					<td>Date of Registration</td>
+					<td>{data.user.created}</td>
 				</tr>
 			</tbody>
-		{/each}
-	</table>
 
-	<h2>Registration Details</h2>
-	<table class="">
-		<!-- <thead>
-			<tr>
-				<th>Label</th>
-				<th>Value</th>
-			</tr>
-		</thead> -->
-		<tbody>
-			<tr>
-				<td>Full Name</td>
-				<td>{data.user.name}</td>
-			</tr>
-			<tr>
-				<td>Email</td>
-				<td>{data.user.email}</td>
-			</tr>
-			<tr>
-				<td>Date of Registration</td>
-				<td>{data.user.created}</td>
-			</tr>
-		</tbody>
-		{#each data.submissions as submission}
-			<tbody>
-				<tr>
-					<td>Role</td>
-					<td>
-						{#if submission.role === "leaver"}
-							Leaver
-						{:else if submission.role === "alumni"}
-							Alumni
-						{:else if submission.role === "staff"}
-							Staff/Faculty
-						{:else}
-							Unknown
-						{/if}
-					</td>
-				</tr>
-				{#if submission.role !== "leaver"}
+			{#each submissions as submission}
+				<tbody>
 					<tr>
-						<td>Also Team Leader</td>
-						<td>{submission.wantsTeamLeader ? "yes" : "no"}</td>
+						<td>Role</td>
+						<td>
+							{#if submission.role === "leaver"}
+								Leaver
+							{:else if submission.role === "alumni"}
+								Alumni
+							{:else if submission.role === "staff"}
+								Staff/Faculty
+							{:else}
+								Unknown
+							{/if}
+						</td>
 					</tr>
-					{#if submission.wantsTeamLeader}
+					{#if submission.role !== "leaver"}
 						<tr>
-							<td>Partner Team Leader</td>
-							<td>{submission.partnerTeamLeader}</td>
+							<td>Also Team Leader</td>
+							<td>{submission.wantsTeamLeader ? "yes" : "no"}</td>
+						</tr>
+						{#if submission.wantsTeamLeader}
+							<tr>
+								<td>Partner Team Leader</td>
+								<td>{submission.partnerTeamLeader}</td>
+							</tr>
+						{/if}
+					{/if}
+					{#if submission.role !== "leaver"}
+						<tr>
+							<td>Ordered Extra Hoodie</td>
+							<td>{submission.wantsHoodie ? "yes" : "no"}</td>
 						</tr>
 					{/if}
-				{/if}
-				{#if submission.role !== "leaver"}
+
 					<tr>
-						<td>Ordered Extra Hoodie</td>
-						<td>{submission.wantsHoodie ? "yes" : "no"}</td>
-					</tr>
-				{/if}
-
-				<tr>
-					<td>Phone Number</td>
-					<td>{submission.phoneNumber}</td>
-				</tr>
-
-				<tr>
-					<td>Accommodation Type</td>
-					<td>{submission.accommodationType}</td>
-				</tr>
-
-				<tr>
-					<td>Duration of Stay</td>
-					<td>
-						{submission.durationOfStay.length >= 4
-							? "All week"
-							: submission.durationOfStay.join(", ")}
-					</td>
-				</tr>
-
-				<tr>
-					<td>Billing City</td>
-					<td>{submission.city}</td>
-				</tr>
-
-				<tr>
-					<td>Billing Country</td>
-					<td>{submission.country}</td>
-				</tr>
-
-				<tr>
-					<td>Billing ZIP</td>
-					<td>{submission.zip}</td>
-				</tr>
-
-				<tr>
-					<td>Billing Street and House</td>
-					<td>{submission.streetAndHouseNumber}</td>
-				</tr>
-
-				<tr>
-					<td>Medical Conditions</td>
-					<td>{submission.medical}</td>
-				</tr>
-
-				<tr>
-					<td>Diet</td>
-					<td>{submission.diet}</td>
-				</tr>
-
-				{#if submission.role !== "staff"}
-					<tr>
-						<td>University</td>
-						<td>{submission.university}</td>
+						<td>Phone Number</td>
+						<td>{submission.phoneNumber}</td>
 					</tr>
 
 					<tr>
-						<td>Course</td>
-						<td>{submission.course}</td>
+						<td>Accommodation Type</td>
+						<td>{submission.accommodationType}</td>
 					</tr>
-				{/if}
 
-				<tr>
-					<td>Comment</td>
-					<td>{submission.comment}</td>
-				</tr>
-			</tbody>
-		{/each}
-	</table>
+					<tr>
+						<td>Duration of Stay</td>
+						<td>
+							{submission.durationOfStay.length >= 4
+								? "All week"
+								: submission.durationOfStay.join(", ")}
+						</td>
+					</tr>
+
+					<tr>
+						<td>Billing City</td>
+						<td>{submission.city}</td>
+					</tr>
+
+					<tr>
+						<td>Billing Country</td>
+						<td>{submission.country}</td>
+					</tr>
+
+					<tr>
+						<td>Billing ZIP</td>
+						<td>{submission.zip}</td>
+					</tr>
+
+					<tr>
+						<td>Billing Street and House</td>
+						<td>{submission.streetAndHouseNumber}</td>
+					</tr>
+
+					<tr>
+						<td>Medical Conditions</td>
+						<td>{submission.medical}</td>
+					</tr>
+
+					<tr>
+						<td>Diet</td>
+						<td>{submission.diet}</td>
+					</tr>
+
+					{#if submission.role !== "staff"}
+						<tr>
+							<td>University</td>
+							<td>{submission.university}</td>
+						</tr>
+
+						<tr>
+							<td>Course</td>
+							<td>{submission.course}</td>
+						</tr>
+					{/if}
+
+					<tr>
+						<td>Comment</td>
+						<td>{submission.comment}</td>
+					</tr>
+				</tbody>
+			{/each}
+		</table>
+	{/await}
 </section>
 
 <style lang="postcss">

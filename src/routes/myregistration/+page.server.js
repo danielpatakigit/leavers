@@ -5,24 +5,30 @@ export async function load({ locals }) {
 	}
 
 	try {
-		// Fetch payments records
-		const paymentsResult = await locals.pb
-			.collection("payments")
-			.getList(1, 10, {
-				filter: `user="${locals.user.id}"`,
-			});
-
-		// Fetch submissions records
-		const submissionsResult = await locals.pb
-			.collection("submissions")
-			.getList(1, 10, {
-				filter: `user="${locals.user.id}"`,
-			});
-
-		const payments = paymentsResult.items;
-		const submissions = submissionsResult.items;
-		return { payments, submissions };
+		return {
+			payments: queryPayments(locals),
+			submissions: querySubmissions(locals),
+		};
 	} catch (error) {
 		console.error("Error fetching records:", error);
 	}
+}
+
+async function queryPayments(locals) {
+	// Fetch payments records
+	const paymentsResult = await locals.pb.collection("payments").getList(1, 10, {
+		filter: `user="${locals.user.id}"`,
+	});
+	return paymentsResult.items;
+}
+
+async function querySubmissions(locals) {
+	// Fetch submissions records
+	const submissionsResult = await locals.pb
+		.collection("submissions")
+		.getList(1, 10, {
+			filter: `user="${locals.user.id}"`,
+		});
+
+	return submissionsResult.items;
 }
