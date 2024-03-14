@@ -11,10 +11,13 @@
 	let loading = false;
 	$: loading = form?.success;
 
-	let passwordError = "";
 	let password = "";
 	let passwordConfirm = "";
+
 	let passwordMode = true;
+
+	let passwordConfirmError = false;
+	let passwordLenghtError = false;
 
 	let selectedRole = null;
 	let isTeamLeader = true;
@@ -66,17 +69,27 @@
 							type={passwordMode ? "password" : "text"}
 							name="password"
 							id="password"
-							style={passwordError ? "border-color: red" : ""}
+							style={passwordConfirmError || passwordLenghtError
+								? "border-color: red"
+								: ""}
 							on:change={(e) => {
 								password = e.currentTarget.value;
 								if (passwordConfirm !== password) {
-									passwordError = "Passwords do not match!";
+									passwordConfirmError = true;
 								} else {
-									passwordError = "";
+									passwordConfirmError = false;
+								}
+
+								if (password.length < 8) {
+									passwordLenghtError = true;
+								} else {
+									passwordLenghtError = false;
 								}
 							}}
 						/>
-						<small>Must be at least 8 characters long.</small>
+						{#if passwordLenghtError}
+							<small>Must be at least 8 characters long.</small>
+						{/if}
 					</label>
 					<label for="passwordConfirm">
 						Confirm Passoword
@@ -85,32 +98,38 @@
 							type={passwordMode ? "password" : "text"}
 							name="passwordConfirm"
 							id="passwordConfirm"
-							style={passwordError ? "border-color: red" : ""}
+							style={passwordConfirmError || passwordLenghtError
+								? "border-color: red"
+								: ""}
 							on:change={(e) => {
 								passwordConfirm = e.currentTarget.value;
 								if (passwordConfirm !== password) {
-									passwordError = "Passwords do not match!";
+									passwordConfirmError = true;
 								} else {
-									passwordError = "";
+									passwordConfirmError = false;
 								}
 							}}
 						/>
-						{#if passwordError}
-							<small>{passwordError}</small>
+						{#if passwordConfirmError}
+							<small>Passwords do not match!</small>
 						{/if}
 					</label>
 				</div>
 
 				<button
 					type="button"
-					class="cursor-pointer text-left underline"
+					class="w-fit cursor-pointer rounded-lg border-2 border-zinc-600 px-2 py-1 text-left font-semibold text-zinc-600"
 					on:click={() => (passwordMode = !passwordMode)}
 				>
-					Show Password
+					{#if passwordMode}
+						Show Password
+					{:else}
+						Hide Password
+					{/if}
 				</button>
 				<small>
-					With your email address and this password you'll be able to log back
-					in later and check on the status of your registration.
+					Please remember this password. You'll need it later to access your
+					registration details and infopackages.
 				</small>
 				<label for="phoneNumber">
 					Phone Number
@@ -241,7 +260,7 @@
 						</label>
 					</fieldset>
 					{#if isTeamLeader}
-						<label for="partnerTeamLeader">
+						<label for="partnerTeamLeader" in:slide>
 							If yes, who would you prefer as your team leader partner?
 							<input
 								type="text"
@@ -331,24 +350,26 @@
 						</fieldset>
 					{/if}
 					{#if wantsHoodie || selectedRole === "leaver"}
-						<h3>Please select your hoodie size:</h3>
-						<fieldset class="checkbox-fields">
-							{#each sizes as size, i}
-								{@const checked = i === 2 ? "checked" : ""}
-								<div class="checkbox-field">
-									<input
-										{checked}
-										type="radio"
-										name="hoodieSize"
-										value={size}
-										id={size}
-									/>
-									<label for={size}>
-										<span class="title">{size}</span>
-									</label>
-								</div>
-							{/each}
-						</fieldset>
+						<div class="field-container" in:slide>
+							<h3>Please select your hoodie size:</h3>
+							<fieldset class="checkbox-fields">
+								{#each sizes as size, i}
+									{@const checked = i === 2 ? "checked" : ""}
+									<div class="checkbox-field">
+										<input
+											{checked}
+											type="radio"
+											name="hoodieSize"
+											value={size}
+											id={size}
+										/>
+										<label for={size}>
+											<span class="title">{size}</span>
+										</label>
+									</div>
+								{/each}
+							</fieldset>
+						</div>
 					{/if}
 				</div>
 			</div>
@@ -486,12 +507,13 @@
 					</div>
 				</div>
 			</div>
-			{@const disabled = passwordError ? "disabled" : ""}
+			{@const disabled = passwordConfirmError ? "disabled" : ""}
 			<button
 				{disabled}
 				type="submit"
 				class=" mt-4 w-full rounded-xl bg-gold-900 px-8 py-4 text-center text-lg font-bold text-white shadow-md hover:bg-gold-800"
 				on:click={() => (loading = true)}
+				in:slide
 			>
 				{#if loading}
 					<Loader></Loader>
@@ -539,7 +561,7 @@
 		@apply hidden;
 	}
 	.checkbox-field label {
-		@apply flex cursor-pointer flex-col items-center justify-center rounded-2xl border-4 p-6 px-6 text-center text-xl hover:scale-95 hover:border-gold-400 hover:bg-gold-100 hover:opacity-100 active:scale-95;
+		@apply flex cursor-pointer flex-col items-center justify-center rounded-2xl border-4 p-6 px-6 text-center text-xl transition-all hover:scale-95 hover:border-gold-400 hover:bg-gold-100 hover:opacity-100 active:scale-95;
 	}
 
 	.checkbox-field label .icon {

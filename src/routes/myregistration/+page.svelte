@@ -214,7 +214,6 @@
 		@apply mt-4 w-full;
 	}
 
-	th,
 	td {
 		@apply border px-4 py-2;
 	}

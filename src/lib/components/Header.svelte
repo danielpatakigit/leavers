@@ -47,4 +47,8 @@
 	.hot-link-style-button {
 		@apply flex items-center gap-1 rounded-lg bg-gold-900 px-4 py-1 text-center text-lg font-bold text-white shadow-md hover:bg-gold-800;
 	}
+
+	header {
+		view-transition-name: header;
+	}
 </style>
