@@ -219,9 +219,9 @@
 		@apply border px-4 py-2;
 	}
 
-	th {
+	/* th {
 		@apply bg-gray-100 text-sm font-bold uppercase text-gray-800;
-	}
+	} */
 
 	td {
 		@apply bg-inherit text-sm  text-gray-700;
@@ -230,7 +230,7 @@
 		@apply bg-zinc-100 font-semibold;
 	}
 	tr {
-		@apply grid md:grid-cols-[20rem,_1fr];
+		@apply grid grid-cols-2 md:grid-cols-[20rem,_1fr];
 	}
 
 	tbody {
