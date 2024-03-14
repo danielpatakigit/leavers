@@ -65,38 +65,42 @@ export const organizers = [
 	{
 		name: "Anna Házas",
 		tag: "Chair of the Organizing Committee",
-		img: "placeholder.png",
+		img: "organizers/Anna_Hazas.jpeg",
 	},
 	{
 		name: "Eleonóra Bolhuis",
 		tag: "Head of External Relations and Sponsorships",
-		img: "placeholder.png",
+		img: "organizers/Eleonóra_Bolhuis.jpeg",
 	},
 	{
 		name: "Aliz Hárs",
 		tag: "Sponsorships Coordinator",
-		img: "placeholder.png",
+		img: "organizers/Aliz_Hárs.jpg",
 	},
 	{
-		name: "Ipsum Lorem",
+		name: "Léna Lakatos",
 		tag: "External Relations Coordinator",
-		img: "placeholder.png",
+		img: "organizers/Léna_Lakatos.jpg",
 	},
 	{
 		name: "Patrik Nadrai",
 		tag: "Head of Content and Creative",
-		img: "placeholder.png",
+		img: "organizers/Patrik_Nadrai.jpg",
 	},
-	{ name: "Emil", tag: "Content Officer", img: "placeholder.png" },
 	{
-		name: "Ipsum Lorem",
+		name: "Emil Mészáros",
 		tag: "Content Officer",
-		img: "placeholder.png",
+		img: "organizers/Emil_Mészáros.jpg",
+	},
+	{
+		name: "Botond Kolossay",
+		tag: "Content Officer",
+		img: "organizers/Botond_Kolossay.jpeg",
 	},
 	{
 		name: "Panna Kovács",
 		tag: "Content Officer",
-		img: "placeholder.png",
+		img: "organizers/Panna_Kovács.jpg",
 	},
 	{
 		name: "Kamilla Kovács",
@@ -104,7 +108,7 @@ export const organizers = [
 		img: "placeholder.png",
 	},
 	{
-		name: "Mimi",
+		name: "Mimi Steckmüller",
 		tag: "Participation Coordinator",
 		img: "placeholder.png",
 	},
@@ -112,22 +116,22 @@ export const organizers = [
 	{
 		name: "István Halász",
 		tag: "Camp Coordinator",
-		img: "placeholder.png",
+		img: "organizers/István_Halász.jpeg",
 	},
 	{
 		name: "Dániel Pataki",
 		tag: "Head of Finance and Logistics",
-		img: "placeholder.png",
+		img: "organizers/Dániel_Pataki.jpg",
 	},
 	{
 		name: "Mátyás Örlős",
 		tag: "Finance Coordinator",
-		img: "placeholder.png",
+		img: "organizers/Matyas_Orlos.png",
 	},
 	{
-		name: "Luca Vidman",
+		name: "Luca Vidmann",
 		tag: "Logistics Coordinator",
-		img: "placeholder.png",
+		img: "organizers/Luca_Vidmann.JPG",
 	},
 	{
 		name: "Julcsi Balázs",

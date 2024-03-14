@@ -1,7 +1,7 @@
 <script>
 	import { confetti } from "@neoconfetti/svelte";
 	import Title from "../../lib/components/Title.svelte";
-	import { fade, slide } from "svelte/transition";
+	import { fade, scale } from "svelte/transition";
 	import { onMount } from "svelte";
 	import Loader from "../../lib/components/Loader.svelte";
 
@@ -34,10 +34,6 @@
 		tag="REGISTRATION status"
 		title="Successful Registration!"
 		subtitle="If you're seeing this, that means we have successfully received your registration for Milestone Leavers' Camp 2024. Keep an eye out for incoming emails and don't forget to pay the fee requests to keep your place in the camp. "
-		backHref="/"
-		backText="Home"
-		forwardHref="/"
-		forwardText="Info"
 	/>
 </section>
 
@@ -55,7 +51,7 @@
 			<div class="h-4 w-4 animate-bounce rounded-full bg-gold-900"></div>
 		</div>
 	{:then payments}
-		<table class="" transition:slide>
+		<table class="" transition:scale>
 			<!-- <thead>
 			<tr>
 				<th>Label</th>
@@ -104,7 +100,7 @@
 			<div class="h-4 w-4 animate-bounce rounded-full bg-gold-900"></div>
 		</div>
 	{:then submissions}
-		<table class="" transition:slide>
+		<table class="" transition:scale>
 			<!-- <thead>
 			<tr>
 				<th>Label</th>
