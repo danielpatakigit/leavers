@@ -2,10 +2,13 @@
 	import Title from "../../lib/components/Title.svelte";
 	import { rules } from "$lib";
 	import Link from "../../lib/components/Link.svelte";
+
+	export let data;
 </script>
 
 <div class="mt-36"></div>
-<section class="">
+
+<section>
 	<Title
 		h1={true}
 		id="house-rules"
@@ -14,12 +17,18 @@
 		subtitle="Please familiarize yourself with the camp's Rules before registering"
 		backHref="/organizers"
 		backText="Organizers"
-		forwardHref="/register"
-		forwardText="Register"
+		forwardHref="/"
+		forwardText="Info"
 	></Title>
 </section>
-<section class="">
-	<div class="">
+
+<section>
+	<img
+		src="leavers_photo_5.jpg"
+		alt="house rules illustration"
+		class="mx-auto rounded-2xl shadow-2xl"
+	/>
+	<div>
 		{#each rules as content}
 			<h3 class="mt-14 text-xl font-bold">{content.name}</h3>
 			<div class="rule mt-4">{@html content.html}</div>
@@ -39,18 +48,10 @@
 
 <section>
 	<div class="flex flex-col items-center gap-4">
-		<Link
-			href="/register"
-			icon=""
-			text="Register Now!"
-			hot={true}
-		/>
-		<Link
-			href="/organizers"
-			icon="mdi:user"
-			text="Organizers"
-			hot={false}
-		/>
+		{#if !data?.user}
+			<Link href="/register" icon="" text="Register Now!" hot={true} />
+		{/if}
+		<Link href="/organizers" icon="mdi:user" text="Organizers" hot={false} />
 		<Link
 			href="https://www.instagram.com/milestoneleaverscamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
 			icon="mdi:instagram"

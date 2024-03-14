@@ -8,20 +8,27 @@
 	let slider;
 	let currentSlidePosition = 0;
 
+	let nextDisabled;
+	let prevDisabled;
+
+	$: {
+		nextDisabled =
+			!slider ||
+			currentSlidePosition >= slider.scrollWidth - slider.clientWidth;
+		prevDisabled = currentSlidePosition <= 0;
+	}
+
 	onMount(() => {
 		if (slider) {
 			slider.addEventListener("scroll", updateSlidePosition);
+			// Ensure slider starts at left side when mounted
+			slider.scrollTo({ left: 0, behavior: "auto" });
 		}
 	});
 
 	function updateSlidePosition() {
 		currentSlidePosition = slider.scrollLeft;
 	}
-
-	$: nextDisabled = slider
-		? currentSlidePosition >= slider.scrollWidth - slider.clientWidth
-		: false;
-	$: prevDisabled = currentSlidePosition <= 0;
 
 	function slide(direction) {
 		const moveAmount = slider.clientWidth * 0.3; // Use slider's client width
@@ -45,7 +52,7 @@
 	<div class="slider-button-wrapper">
 		<button
 			type="button"
-			on:click|stopPropagation|preventDefault={() => slide("prev")}
+			on:click={() => slide("prev")}
 			disabled={prevDisabled}
 			class="slider-button w-min"
 		>
@@ -54,7 +61,6 @@
 	</div>
 	<div
 		class="slider {hasGap ? 'gap-6' : ''} "
-		style=""
 		use:dragscroll
 		bind:this={slider}
 	>
@@ -63,7 +69,7 @@
 	<div class="slider-button-wrapper">
 		<button
 			type="button"
-			on:click|stopPropagation|preventDefault={() => slide("next")}
+			on:click={() => slide("next")}
 			disabled={nextDisabled}
 			class="slider-button w-min"
 		>

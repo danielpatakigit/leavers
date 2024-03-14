@@ -3,6 +3,8 @@
 	import { organizers } from "$lib";
 	import OrganizerCard from "../../lib/components/OrganizerCard.svelte";
 	import Link from "../../lib/components/Link.svelte";
+
+	export let data;
 </script>
 
 <div class="mt-36"></div>
@@ -20,7 +22,7 @@
 	></Title>
 </section>
 <section class="mt-24">
-	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+	<div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
 		{#each organizers as content}
 			<OrganizerCard {content}></OrganizerCard>
 		{/each}
@@ -39,18 +41,11 @@
 
 <section>
 	<div class="flex flex-col items-center gap-4">
-		<Link
-			href="/register"
-			icon=""
-			text="Register Now!"
-			hot={true}
-		/>
-		<Link
-			href="/houserules"
-			icon="mdi:house"
-			text="House Rules"
-			hot={false}
-		/>
+		{#if !data?.user}
+			<Link href="/register" icon="" text="Register Now!" hot={true} />
+		{/if}
+
+		<Link href="/houserules" icon="mdi:house" text="House Rules" hot={false} />
 		<Link
 			href="https://www.instagram.com/milestoneleaverscamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
 			icon="mdi:instagram"

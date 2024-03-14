@@ -2,7 +2,8 @@
 	import Icon from "@iconify/svelte";
 	import Link from "./Link.svelte";
 	import { roles } from "$lib";
-	import { fade, slide } from "svelte/transition";
+
+	export let data;
 
 	let selectedRole = ""; // Default role, can be 'leavers' or 'alumni'
 </script>
@@ -23,7 +24,7 @@
 		including games, workshops, the official Milestone graduation ceremony (!)
 		and other fun-filled experiences.
 	</p>
-	<span>Select your role to see infos</span>
+	<h3 class="text-center">Select your role in Milestone to see details</h3>
 	<fieldset class="mt-2 flex flex-row gap-4">
 		{#each roles.slice(0, 2) as role, i}
 			<div class="w-full">
@@ -36,18 +37,11 @@
 					bind:group={selectedRole}
 				/>
 
-				<label
-					for={role.value}
-					class="role-label py-6"
-				>
+				<label for={role.value} class="role-label py-6">
 					<div class="">
-						<Icon
-							class="text-4xl text-gold-900"
-							icon={role.icon}
-						></Icon>
+						<Icon class="text-4xl text-gold-900" icon={role.icon}></Icon>
 					</div>
 					{role.label}
-					<span class="text-balance pt-2 text-sm">Click for infos</span>
 				</label>
 			</div>
 		{/each}
@@ -114,40 +108,42 @@
 		</li>
 		<li>Completed payments are non-refundable!</li>
 		<span>
-			For more infos please read the <a href="/#faq">FAQ</a>
+			For more information please read the <a href="/#faq">FAQ.</a>
 		</span>
-		<div class="mt-8">
-			<img
-				src="/leavers_photo_group.jpg"
-				alt=""
-				class="rounded-xl"
-			/>
-		</div>
-		<div class="mt-10 flex items-center justify-center">
+	{/if}
+
+	<div class="mt-10 flex items-center justify-center">
+		{#if !data?.user}
+			<Link href="/register" icon="" text="Register Now!" hot={true} />
+		{:else}
 			<Link
-				href="/register"
-				icon=""
-				text="Register Now!"
+				href="/myregistration"
+				icon="solar:paperclip-linear"
+				text="My Registration"
 				hot={true}
 			/>
-		</div>
-	{/if}
+		{/if}
+	</div>
+</div>
+<div class="mt-16">
+	<img src="/leavers_photo_group.jpg" alt="" class="rounded-xl" />
 </div>
 
 <style lang="postcss">
 	h2 {
-		@apply text-2xl font-bold;
-	}
-	h3 {
-		@apply mt-10 text-xl font-bold;
+		@apply text-center text-2xl font-bold;
 	}
 
-	p {
-		@apply mt-4;
+	h3 {
+		@apply mb-6 mt-10 text-xl font-bold;
 	}
 
 	span {
 		@apply mt-4 block font-bold;
+	}
+
+	p {
+		@apply mt-4;
 	}
 
 	li {

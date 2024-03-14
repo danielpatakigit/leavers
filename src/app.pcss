@@ -5,11 +5,9 @@
 
 @layer base {
 	html {
-		@apply scroll-smooth;
-	}
+		scrollbar-gutter: stable;
 
-	* {
-		/* @apply border; */
+		@apply scroll-p-36 scroll-smooth;
 	}
 
 	section {
@@ -21,11 +19,8 @@
 	}
 
 	button,
-	a,
-	.checkbox-label,
-	.option-label,
-	.role-label {
-		@apply transition-all active:scale-95;
+	a {
+		@apply duration-200 hover:scale-95 active:scale-95;
 	}
 
 	button {

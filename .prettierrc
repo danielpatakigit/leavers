@@ -11,12 +11,9 @@
 			}
 		}
 	],
-	"plugins": [
-		"prettier-plugin-svelte",
-		"prettier-plugin-tailwindcss"
-	],
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"bracketSpacing": true,
 	"bracketSameLine": false,
 	"htmlWhitespaceSensitivity": "ignore",
-	"singleAttributePerLine": true
+	"singleAttributePerLine": false
 }

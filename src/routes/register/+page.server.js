@@ -1,15 +1,22 @@
-import { fail } from "@sveltejs/kit";
-import { pb } from "$lib/pocketbase";
+import { fail, redirect } from "@sveltejs/kit";
+
+/** @type {import('./$types').PageServerLoad} */
+export async function load({ locals }) {
+	if (locals.pb.authStore.isValid) {
+		throw redirect(303, "/");
+	}
+}
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-	register: async (event) => {
+	register: async ({ locals, request }) => {
 		try {
-			const f = await event.request.formData();
+			const f = await request.formData();
 
 			// Extract values from the form
 			const email = f.get("email");
 			const password = f.get("password");
+			const passwordConfirm = f.get("passwordConfirm");
 			const givenName = f.get("givenName");
 			const familyName = f.get("familyName");
 			const phoneNumber = f.get("phoneNumber");
@@ -21,7 +28,7 @@ export const actions = {
 			const streetAndHouseNumber = f.get("streetAndHouseNumber");
 			const role = f.get("role");
 			const wantsTeamLeader = f.get("wantsTeamLeader") === "yes";
-			const partnerTeamLeader = f.get("partnerTeamLeader") === "yes";
+			const partnerTeamLeader = f.get("partnerTeamLeader");
 			const durationOfStay = f.getAll("durationOfStay");
 			const wantsHoodie = f.get("wantsHoodie") === "yes";
 			const hoodieSize = f.get("hoodieSize");
@@ -35,41 +42,44 @@ export const actions = {
 			// Create a new user in the Users collection
 			const userData = {
 				username: null,
-				email: email,
+				email,
 				emailVisibility: true,
-				password: password,
-				passwordConfirm: f.get("passwordConfirm"),
+				password,
+				passwordConfirm,
 				name: `${givenName} ${familyName}`,
 				avatarURL: null,
-				familyName: familyName,
-				givenName: givenName,
+				familyName,
+				givenName,
 			};
-			const newUser = await pb.collection("users").create(userData);
+			const newUser = await locals.pb.collection("users").create(userData);
 
 			// Save the submission of this User
 			const submissionData = {
 				user: newUser.id,
-				phoneNumber: phoneNumber,
-				diet: diet,
-				medical: medical,
-				country: country,
-				city: city,
-				zip: zip,
-				streetAndHouseNumber: streetAndHouseNumber,
-				role: role,
-				wantsTeamLeader: wantsTeamLeader,
-				partnerTeamLeader: partnerTeamLeader,
-				durationOfStay: durationOfStay,
-				wantsHoodie: wantsHoodie,
-				hoodieSize: hoodieSize,
-				accommodationType: accommodationType,
-				university: university,
-				course: course,
-				acceptsTermsAndConditions: acceptsTermsAndConditions,
-				comment: comment,
+				phoneNumber,
+				diet,
+				medical,
+				country,
+				city,
+				zip,
+				streetAndHouseNumber,
+				role,
+				wantsTeamLeader,
+				partnerTeamLeader,
+				durationOfStay:
+					durationOfStay === null || durationOfStay.length <= 0
+						? ["Wednesday", "Thursday", "Friday", "Saturday"]
+						: durationOfStay,
+				wantsHoodie,
+				hoodieSize,
+				accommodationType,
+				university,
+				course,
+				acceptsTermsAndConditions,
+				comment,
 			};
 
-			const submission = await pb
+			const submission = await locals.pb
 				.collection("submissions")
 				.create(submissionData);
 
@@ -125,29 +135,31 @@ export const actions = {
 				user: newUser.id,
 				type: "remainder",
 				amount: remainder,
-				extraHoodieIncluded: extraHoodieIncluded,
+				extraHoodieIncluded,
 				issued: null,
 				payed: null,
 			};
 
-			const depositRecord = await pb.collection("payments").create(depositData);
-			const remainderRecord = await pb
+			const depositRecord = await locals.pb
+				.collection("payments")
+				.create(depositData);
+
+			const remainderRecord = await locals.pb
 				.collection("payments")
 				.create(remainderData);
 
-			return {
-				success: true,
-				submission,
-				newUser,
-				depositRecord,
-				remainderRecord,
-			};
+			// Log in the newly created user
+			const user = await locals.pb
+				.collection("users")
+				.authWithPassword(newUser.email, password);
 		} catch (error) {
 			console.log(error);
 			return fail(500, {
 				message: "Something went wrong. Please try again later.",
-				error: error,
+				error: JSON.stringify(error),
 			});
 		}
+
+		throw redirect(303, "/myregistration");
 	},
 };

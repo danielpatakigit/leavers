@@ -4,101 +4,51 @@
 	import Slider from "../lib/components/Slider.svelte";
 	import Title from "../lib/components/Title.svelte";
 	import Info from "../lib/components/Info.svelte";
-
-	import { testamonials, faq } from "$lib/index.js";
 	import TestamonialCard from "../lib/components/TestamonialCard.svelte";
 	import QuestionCard from "../lib/components/QuestionCard.svelte";
+	import { testimonials, faq } from "$lib/index.js";
+
+	export let data;
 </script>
 
 <div class="mt-44"></div>
+
 <section class="flex flex-col items-center">
-	<h1 class=" flex flex-col text-balance text-center text-4xl">
+	<h1 class="flex flex-col text-balance text-center text-4xl">
 		<span class="font-sans font-semibold">The Ultimate</span>
 		<span class="mt-2 font-serif font-bold text-gold-800">
 			Milestone Experience
 		</span>
 	</h1>
 	<p class="mt-4 text-balance text-center">
-		Embark on a journey of community, discovery, <br class="hidden md:block" />
+		Embark on a journey of community, discovery,
+		<br class="hidden md:block" />
 		and celebration as we pave the way for your next chapter.
 	</p>
 	<div class="mt-8 flex flex-col items-center text-center">
 		<span class="font-bold">July 31st - August 4th</span>
-		<a
-			href="/"
-			class="flex w-min items-center gap-1 underline"
-		>
+		<a href="/" class="flex w-min items-center gap-1 underline">
 			<Icon icon="mdi-location"></Icon>
 			<span class="">Csórompuszta</span>
 		</a>
 		<span class="mt-2 text-xs">For Seniors & Alumni</span>
 	</div>
 	<div class="mt-10 flex gap-4">
-		<Link
-			href="/#information"
-			icon="mdi:info"
-			text="Infos"
-			hot={false}
-		/>
-		<Link
-			href="/register"
-			icon=""
-			text="Register"
-			hot={true}
-		/>
+		<Link href="/#information" icon="mdi:info" text="Infos" hot={false} />
+		{#if !data?.user}
+			<Link href="/register" icon="" text="Register" hot={true} />
+		{/if}
 	</div>
 </section>
 
 <section class="mt-24">
 	<Slider>
-		<!-- <div class="flex-[0_0_85%] md:flex-[0_0_45%]">
-			<img
-				src="/placeholder.png"
-				alt="placeholder"
-				class=""
-			/>
-		</div> -->
-		<img
-			src="/leavers_photo_8.jpg"
-			alt="leavers_photo_8"
-		/>
-		<img
-			src="/leavers_photo_6.jpg"
-			alt="leavers_photo_6"
-		/>
-		<img
-			src="/leavers_photo_9.jpg"
-			alt="leavers_photo_9"
-		/>
-		<img
-			src="/leavers_photo_2.jpg"
-			alt="leavers_photo_2"
-		/>
-		<img
-			src="/leavers_photo_3.jpg"
-			alt="leavers_photo_3"
-		/>
-
-		<img
-			src="/leavers_photo_5.jpg"
-			alt="leavers_photo_5"
-		/>
-
-		<img
-			src="/leavers_photo_1.jpg"
-			alt="leavers_photo_1"
-		/>
-		<img
-			src="/leavers_photo_4.jpg"
-			alt="leavers_photo_4"
-		/>
-
-		<img
-			src="/leavers_photo_7.jpg"
-			alt="leavers_photo_7"
-		/>
+		{#each ["/leavers_photo_8.jpg", "/leavers_photo_6.jpg", "/leavers_photo_9.jpg", "/leavers_photo_2.jpg", "/leavers_photo_3.jpg", "/leavers_photo_1.jpg", "/leavers_photo_4.jpg", "/leavers_photo_7.jpg"] as src}
+			<img {src} alt={src} />
+		{/each}
 	</Slider>
 </section>
+
 <section class="mt-24">
 	<Title
 		h1={false}
@@ -109,8 +59,8 @@
 	></Title>
 </section>
 
-<section class="">
-	<Info></Info>
+<section>
+	<Info {data}></Info>
 </section>
 
 <section class="mt-24">
@@ -123,12 +73,10 @@
 	></Title>
 </section>
 
-<section class="">
+<section>
 	<Slider hasGap={true}>
-		{#each testamonials as content, i}
-			<TestamonialCard
-				class="flex-[0_0_80%] md:flex-[0_0_55%]"
-				{content}
+		{#each testimonials as content, i}
+			<TestamonialCard class="flex-[0_0_80%] md:flex-[0_0_55%]" {content}
 			></TestamonialCard>
 		{/each}
 	</Slider>
@@ -143,13 +91,15 @@
 		subtitle="You might find an answer to it below, if not, make sure to get in contact with us as soon as possible"
 	></Title>
 </section>
-<section class="">
+
+<section>
 	<div class="flex flex-wrap gap-8">
 		{#each faq as content}
 			<QuestionCard {content}></QuestionCard>
 		{/each}
 	</div>
 </section>
+
 <section class="mt-24">
 	<Title
 		h1={false}
@@ -162,12 +112,7 @@
 
 <section>
 	<div class="flex flex-col items-center gap-4">
-		<Link
-			href="/houserules"
-			icon="mdi:house"
-			text="House Rules"
-			hot={false}
-		/>
+		<Link href="/houserules" icon="mdi:house" text="House Rules" hot={false} />
 		<Link
 			href="/organizers"
 			icon="mdi:user"

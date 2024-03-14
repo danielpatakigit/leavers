@@ -1,5 +1,5 @@
 // place files you want to import through the `$lib` alias in this folder.
-export const testamonials = [
+export const testimonials = [
 	{
 		name: "Ágnes Horváth",
 		tag: "Lead Educational Programme Designer",
@@ -34,8 +34,13 @@ export const testamonials = [
 
 export const faq = [
 	{
-		question: "How does the allocation of indoor places work exactly?",
-		html: `<p>There is a limited number of indoor sleeping places available. Therefore, we cannot guarantee indoor accommodation for non-leavers. In such cases, we kindly ask you to bring a tent. As a leaver participant, you have the option to deliberately choose to sleep in your own tent. Otherwise, the allocation of indoor places functions on a first-come-first-served basis, with team leaders having priority. You will be notified in due time about whether you need to bring a tent or not.</p>`,
+		question:
+			"What should I do if there is a change or cancellation in my plans regarding the Leavers' Camp?",
+		html: `<p>If you need to make any changes or cancel your plans for the Leavers' Camp, please contact us strictly via email at <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a>. Our team will assist you further and provide guidance on any necessary steps to be taken.</p>`,
+	},
+	{
+		question: "I have a general question. Who do I reach out to?",
+		html: `<p>The quickest way of directly contacting the organizers is by writing to <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a>. Furthermore, it's also worth considering reaching out to the Head of Seniors or Erzsébet Dúcz, the Student Life Coordinator (<a href="mailto:erzsebet.ducz@msinst.org">erzsebet.ducz@msinst.org</a>)</p>`,
 	},
 	{
 		question:
@@ -43,13 +48,12 @@ export const faq = [
 		html: `<p>We understand that it might seem intimidating to join the camp if you do not know many people from your cohort. Please be rest assured that the group activities will help you meet new people and form new friendships, so you will not feel left out! A Welfare Officer will also be present at the camp to ensure everyone has a comfortable experience.</p>`,
 	},
 	{
-		question: "Who is organizing the camp?",
-		html: `<p>The camp is organized by motivated Milestone alumni volunteers, who bring their passion and dedication to the event each year. Additionally, Milestone staff members provide assistance and support to ensure the smooth running of the camp. Together, this collaborative effort ensures a fulfilling and memorable experience for all participants. You can find the list of this years organizers <a href="/organizers">here</a>.</p>`,
+		question: "How does the allocation of indoor places work exactly?",
+		html: `<p>There is a limited number of indoor sleeping places available. Therefore, we cannot guarantee indoor accommodation for non-leavers. In such cases, we kindly ask you to bring a tent. As a leaver participant, you have the option to deliberately choose to sleep in your own tent. Otherwise, the allocation of indoor places functions on a first-come-first-served basis, with team leaders having priority. You will be notified in due time about whether you need to bring a tent or not.</p>`,
 	},
 	{
-		question:
-			"I have a specific question I don’t find the answer(s) to. Who do I reach out to?",
-		html: `<p>The quickest way of directly contacting the organizers is by writing to <a href="mailto:leaverscamp@milestone-institute.org">leaverscamp@milestone-institute.org</a>. Futhermore, it's also worth considering reaching out to the Head of Seniors or Erzsébet Dúcz, the Student Life Coordinator (<a href="mailto:erzsebet.ducz@msinst.org">erzsebet.ducz@msinst.org</a>)</p>`,
+		question: "Who is organizing the camp?",
+		html: `<p>The camp is organized by motivated Milestone alumni volunteers, who bring their passion and dedication to the event each year. Additionally, Milestone staff members provide assistance and support to ensure the smooth running of the camp. Together, this collaborative effort ensures a fulfilling and memorable experience for all participants. You can find the list of this years organizers <a href="/organizers">here</a>.</p>`,
 	},
 	{
 		question: "Where can I read the house rules?",
