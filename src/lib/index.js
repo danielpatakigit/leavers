@@ -181,7 +181,7 @@ export const rules = [
 	},
 ];
 
-export let roles = [
+export const roles = [
 	{
 		value: "leaver",
 		label: "Leaver",
@@ -202,7 +202,7 @@ export let roles = [
 	},
 ];
 
-export let days = [
+export const days = [
 	{
 		value: "Wednesday",
 		label: "Wed",
@@ -225,4 +225,35 @@ export let days = [
 	},
 ];
 
-export let sizes = ["S", "M", "L", "XL"];
+export const sizes = ["S", "M", "L", "XL"];
+
+export const meta = {
+	index: {
+		title: "Milestone Leavers' Camp",
+		description: "The official website of the Milestone Leavers' Camp",
+	},
+	registration: {
+		title: "Leavers' Camp - Registration",
+		description: "Register for the Milestone Leavers' Camp",
+	},
+	organizers: {
+		title: "Leavers' Camp - Organizers",
+		description: "Meet the organizers of the Milestone Leavers' Camp",
+	},
+	houserules: {
+		title: "Leavers' Camp - House Rules",
+		description: "Read the house rules of the Milestone Leavers' Camp",
+	},
+	login: {
+		title: "Leavers' Camp - Login",
+		description: "Login to the Milestone Leavers' Camp",
+	},
+	myregistration: {
+		title: "Leavers' Camp - My Registration",
+		description: "Your registration for the Milestone Leavers' Camp",
+	},
+	register: {
+		title: "Leavers' Camp - Register",
+		description: "Register for the Milestone Leavers' Camp",
+	},
+};

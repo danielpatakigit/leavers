@@ -12,7 +12,13 @@
 				<img src="/ms laika.png" alt="ms laika" />
 			</div>
 			<div class="flex flex-col">
-				<span class="-mb-1 font-serif font-bold">Milestone</span>
+				<span class="-mb-1 font-serif font-bold">
+					{#if data?.user}
+						Leavers' Camp
+					{:else}
+						Milestone
+					{/if}
+				</span>
 				<span class="text-sm">
 					{#if data?.user?.name}
 						<span class="font-light italic">Using as:</span>

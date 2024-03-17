@@ -4,6 +4,7 @@
 	import { fade, scale } from "svelte/transition";
 	import { onMount } from "svelte";
 	import Loader from "../../lib/components/Loader.svelte";
+	import { meta } from "../../lib/index"; // Import the 'meta' object from the appropriate module
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -12,6 +13,12 @@
 		console.log(data);
 	});
 </script>
+
+<svelte:head>
+	<title>{meta["myregistration"].title}</title>
+	<meta name="description" content={meta["myregistration"].description} />
+	<meta name="keywords" content={meta["myregistration"].keywords} />
+</svelte:head>
 
 <div class="mt-36"></div>
 

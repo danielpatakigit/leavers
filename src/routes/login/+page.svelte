@@ -2,7 +2,7 @@
 	import { slide } from "svelte/transition";
 	import Loader from "../../lib/components/Loader.svelte";
 	import Title from "../../lib/components/Title.svelte";
-
+	import { meta } from "../../lib/index"; // Import the 'meta' object from the appropriate module
 	// /** @type {import('./$types').PageData} */
 	// export let data;
 	export let form;
@@ -10,6 +10,11 @@
 	let loading;
 </script>
 
+<svelte:head>
+	<title>{meta["login"].title}</title>
+	<meta name="description" content={meta["login"].description} />
+	<meta name="keywords" content={meta["login"].keywords} />
+</svelte:head>
 <div class="mt-36"></div>
 
 <section>

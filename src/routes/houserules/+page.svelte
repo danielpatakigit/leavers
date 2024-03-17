@@ -1,10 +1,16 @@
 <script>
 	import Title from "../../lib/components/Title.svelte";
-	import { rules } from "$lib";
+	import { rules, meta } from "$lib";
 	import Link from "../../lib/components/Link.svelte";
 
 	export let data;
 </script>
+
+<svelte:head>
+	<title>{meta["houserules"].title}</title>
+	<meta name="description" content={meta["houserules"].description} />
+	<meta name="keywords" content={meta["houserules"].keywords} />
+</svelte:head>
 
 <div class="mt-36"></div>
 

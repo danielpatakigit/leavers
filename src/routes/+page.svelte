@@ -6,10 +6,16 @@
 	import Info from "../lib/components/Info.svelte";
 	import TestamonialCard from "../lib/components/TestamonialCard.svelte";
 	import QuestionCard from "../lib/components/QuestionCard.svelte";
-	import { testimonials, faq } from "$lib/index.js";
+	import { meta, testimonials, faq } from "$lib/index.js";
 
 	export let data;
 </script>
+
+<svelte:head>
+	<title>{meta["index"].title}</title>
+	<meta name="description" content={meta["index"].description} />
+	<meta name="keywords" content={meta["index"].keywords} />
+</svelte:head>
 
 <div class="mt-44"></div>
 

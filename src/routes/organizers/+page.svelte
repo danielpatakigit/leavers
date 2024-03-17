@@ -1,6 +1,6 @@
 <script>
 	import Title from "../../lib/components/Title.svelte";
-	import { organizers } from "$lib";
+	import { organizers, meta } from "$lib";
 	import OrganizerCard from "../../lib/components/OrganizerCard.svelte";
 	import Link from "../../lib/components/Link.svelte";
 	import { fade, fly, slide } from "svelte/transition";
@@ -9,6 +9,11 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>{meta["organizers"].title}</title>
+	<meta name="description" content={meta["organizers"].description} />
+	<meta name="keywords" content={meta["organizers"].keywords} />
+</svelte:head>
 <div class="mt-36"></div>
 <section class="">
 	<Title

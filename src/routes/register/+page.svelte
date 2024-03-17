@@ -1,7 +1,7 @@
 <script>
 	import Icon from "@iconify/svelte";
 	import Title from "../../lib/components/Title.svelte";
-	import { roles, days, sizes } from "$lib";
+	import { roles, days, sizes, meta } from "$lib";
 	import { confetti } from "@neoconfetti/svelte";
 	import Loader from "../../lib/components/Loader.svelte";
 	import { slide } from "svelte/transition";
@@ -23,6 +23,12 @@
 	let isTeamLeader = true;
 	let wantsHoodie = false;
 </script>
+
+<svelte:head>
+	<title>{meta["register"].title}</title>
+	<meta name="description" content={meta["register"].description} />
+	<meta name="keywords" content={meta["register"].keywords} />
+</svelte:head>
 
 <div class="mt-36"></div>
 
