@@ -105,14 +105,14 @@ export const organizers = [
 	{
 		name: "Kamilla Kovács",
 		tag: "Head of Participation and Communication",
-		img: "placeholder.png",
+		img: "organizers/Kamilla_Kovács.jpg",
 	},
 	{
 		name: "Mimi Steckmüller",
 		tag: "Participation Coordinator",
 		img: "placeholder.png",
 	},
-	{ name: "Vyvy", tag: "Welfare Officer", img: "placeholder.png" },
+	{ name: "Vyvy", tag: "Welfare Officer", img: "organizers/Vyvy.jpg" },
 	{
 		name: "István Halász",
 		tag: "Camp Coordinator",
@@ -136,7 +136,7 @@ export const organizers = [
 	{
 		name: "Julcsi Balázs",
 		tag: "Logistics Coordinator",
-		img: "placeholder.png",
+		img: "organizers/Julcsi_Balázs.jpg",
 	},
 ];
 export const rules = [
