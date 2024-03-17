@@ -139,12 +139,14 @@
 					<tr>
 						<td>Role</td>
 						<td>
-							{#if submission.role === "leaver"}
+							{#if data.user.role === "leaver"}
 								Leaver
-							{:else if submission.role === "alumni"}
+							{:else if data.user.role === "alumni"}
 								Alumni
-							{:else if submission.role === "staff"}
+							{:else if data.user.role === "staff"}
 								Staff/Faculty
+							{:else if data.user.role === "organizer"}
+								Organizer
 							{:else}
 								Unknown
 							{/if}

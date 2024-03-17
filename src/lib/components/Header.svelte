@@ -5,7 +5,7 @@
 
 <header class="fixed top-0 z-50 flex w-full justify-center">
 	<div
-		class=" gap flex w-[min(100%,_50rem)] items-center justify-between border border-zinc-100 bg-white px-1 shadow-xl md:mx-4 md:mt-2 md:rounded-xl md:px-4"
+		class=" gap flex w-[min(100%,_50rem)] items-center justify-between bg-white px-1 shadow-xl md:mx-4 md:mt-2 md:rounded-xl md:px-4"
 	>
 		<a href="/" class="flex items-center gap-1">
 			<div class="w-16">

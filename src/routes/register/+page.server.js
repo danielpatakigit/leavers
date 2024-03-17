@@ -50,6 +50,7 @@ export const actions = {
 				admin: false,
 				familyName,
 				givenName,
+				role,
 			};
 			const newUser = await locals.pb.collection("users").create(userData);
 
@@ -63,7 +64,6 @@ export const actions = {
 				city,
 				zip,
 				streetAndHouseNumber,
-				role,
 				wantsTeamLeader,
 				partnerTeamLeader,
 				durationOfStay:
