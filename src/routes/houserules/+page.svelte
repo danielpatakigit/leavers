@@ -69,6 +69,6 @@
 		@apply mt-4;
 	}
 	:global(.rule ul) {
-		@apply list-outside list-decimal;
+		@apply list-inside list-decimal lg:list-outside;
 	}
 </style>

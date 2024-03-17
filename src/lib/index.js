@@ -141,7 +141,7 @@ export const organizers = [
 ];
 export const rules = [
 	{
-		name: "Rules for all",
+		name: "Rules for All",
 		html: `
             <ul>
                 <li>No smoking indoors, please use the designated outdoor smoking areas.</li>
