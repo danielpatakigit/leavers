@@ -206,22 +206,22 @@ export const days = [
 	{
 		value: "Wednesday",
 		label: "Wed",
-		description: "Jul. 31.",
+		description: "Jul. 31st",
 	},
 	{
 		value: "Thursday",
 		label: "Thu",
-		description: "Aug. 1.",
+		description: "Aug. 1st",
 	},
 	{
 		value: "Friday",
 		label: "Fri",
-		description: "Aug. 2.",
+		description: "Aug. 2nd",
 	},
 	{
 		value: "Saturday",
 		label: "Sat",
-		description: "Aug. 3.",
+		description: "Aug. 3rd",
 	},
 ];
 

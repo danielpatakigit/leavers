@@ -32,7 +32,7 @@
 		and celebration as we pave the way for your next chapter.
 	</p>
 	<div class="mt-8 flex flex-col items-center text-center">
-		<span class="font-bold">July 31. - August 4.</span>
+		<span class="font-bold">July 31st - August 4th</span>
 		<div class="mt-2 flex items-center gap-1">
 			<Icon icon="mdi-location"></Icon>
 			<span class="">Csórompuszta</span>

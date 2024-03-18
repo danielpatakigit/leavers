@@ -233,7 +233,7 @@
 						leavers.
 						<strong>
 							Team leaders are required to be present throughout the entire camp
-							(Jul. 31. - Aug. 4.)
+							(Jul. 31st - Aug. 4th)
 						</strong>
 					</small>
 
