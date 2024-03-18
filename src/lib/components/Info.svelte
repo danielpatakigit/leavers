@@ -53,16 +53,16 @@
 	{#if selectedRole === "leaver"}
 		<div>
 			<h3>Leaver Camp Prices and Registration Details</h3>
-			<span>Camp prices for Leavers:</span>
+			<span>Camp prices for leavers:</span>
 			<li>
-				For Milestone Seniors (Leavers): <br class="md:hidden" />
+				For Milestone seniors (leavers): <br class="md:hidden" />
 				<strong>60 000 Ft for the whole camp</strong>
 			</li>
 			<span>Issued in two instalments:</span>
 			<li>
-				Deposit Instalment: 20 000 Ft (issued a few days after you register)
+				Deposit instalment: 20 000 Ft (issued a few days after you register)
 			</li>
-			<li>Remainder Instalment: 40 000 Ft (issued on June 17)</li>
+			<li>Remainder instalment: 40 000 Ft (issued on June 17)</li>
 			<span>This price includes:</span>
 			<li>Guaranteed indoor accommodation</li>
 			<li>Breakfast, lunch, and dinner</li>
@@ -81,16 +81,16 @@
 				<strong>15 000 Ft per day</strong>
 			</li>
 			<li>
-				For Team leaders: <br class="md:hidden" />
+				For team leaders: <br class="md:hidden" />
 				<strong>50 000 Ft for the whole camp</strong>
 			</li>
 
 			<span>Issued in two instalments:</span>
 			<li>
-				Deposit Instalment: 50% of the overall fee (issued a few days after you
+				Deposit instalment: 50% of the overall fee (issued a few days after you
 				register)
 			</li>
-			<li>Remainder Instalment: 50% of the overall fee (issued on June 17)</li>
+			<li>Remainder instalment: 50% of the overall fee (issued on June 17)</li>
 
 			<span>This price includes:</span>
 			<li>Accommodation on camp grounds (indoors not guaranteed)</li>
@@ -103,8 +103,7 @@
 	{#if selectedRole}
 		<span>Important!</span>
 		<li class="">
-			If you register to the camp after the 17th of June you will only receive
-			one fee request for the full amount. The same rules will still apply.
+			If you register to the camp after June 17. you will only receive a full amount fee request. The same rules will still apply.
 		</li>
 		<li>
 			Make sure to pay all fee requests within 3 days. If you don't, we will
