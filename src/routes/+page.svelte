@@ -32,7 +32,7 @@
 		and celebration as we pave the way for your next chapter.
 	</p>
 	<div class="mt-8 flex flex-col items-center text-center">
-		<span class="font-bold">July 31st - August 4th</span>
+		<span class="font-bold">July 31. - August 4.</span>
 		<div class="mt-2 flex items-center gap-1">
 			<Icon icon="mdi-location"></Icon>
 			<span class="">Csórompuszta</span>
@@ -61,7 +61,7 @@
 		id="information"
 		tag="Camp information"
 		title="Milestone Leavers' Camp 2024"
-		subtitle="All you need to know about registering to this year's camp."
+		subtitle="All you need to know about registering to this year's camp"
 	></Title>
 </section>
 
@@ -75,7 +75,7 @@
 		id="experiences"
 		tag="past experiences"
 		title="Voices of the Milestone Community"
-		subtitle="Hear What Others Have to Say About Their Milestone Leavers' Camp Experience"
+		subtitle="Hear what others have to say about their Leavers' Camp experience"
 	></Title>
 </section>
 
