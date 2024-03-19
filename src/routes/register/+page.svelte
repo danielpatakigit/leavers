@@ -380,7 +380,7 @@
 				</div>
 			</div>
 			<div class="form-set" in:slide>
-				<legend>Accomodation</legend>
+				<legend>Accommodation</legend>
 				<div class="fields-container">
 					<h3>Would you prefer to stay indoors or outdoors?</h3>
 					<small>
@@ -425,7 +425,7 @@
 								By letting us know we can make sure that you provide and/or
 								receive the most useful advice in the camp.
 							</small>
-							<input type="text" name="universtiy" id="university" />
+							<input type="text" name="university" id="university" />
 						</label>
 						<label for="course">
 							Please specify the degree course you have selected:
