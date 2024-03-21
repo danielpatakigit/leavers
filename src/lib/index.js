@@ -88,7 +88,7 @@ export const organizers = [
 		img: "organizers/Patrik_Nadrai.jpg",
 	},
 	{
-		name: "Emil Mészáros",
+		name: "Lázár Mészáros",
 		tag: "Content Officer",
 		img: "organizers/Emil_Mészáros.jpg",
 	},
