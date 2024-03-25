@@ -16,23 +16,19 @@ export async function load({ locals }) {
 	});
 
 	const expandedPayments = expandPaymentsWithSubmissions(payments, submissions);
-
-	console.log(expandedPayments);
 	return { payments: expandedPayments };
 }
 
 // Expand payments array with corresponding data from submissions array
 function expandPaymentsWithSubmissions(payments, submissions) {
-	// Create a map to store submissions data indexed by user id
 	const submissionsMap = new Map();
 	submissions.forEach((submission) => {
 		submissionsMap.set(submission.user, submission);
 	});
 
-	// Iterate through payments and add submissions data if found
 	const expandedPayments = payments.map((payment) => {
 		const submissionData = submissionsMap.get(payment.user);
-		return { ...payment, ...submissionData };
+		return { ...payment, ...submissionData, id: payment.id };
 	});
 
 	return expandedPayments;
