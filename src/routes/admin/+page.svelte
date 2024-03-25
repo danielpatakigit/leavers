@@ -116,7 +116,7 @@
 <h1 class="mt-24 text-center text-3xl font-bold">Admin Page</h1>
 
 <div
-	class="sticky top-0 mx-4 mt-12 grid h-[6rem] grid-cols-[repeat(auto-fit,_200px)] gap-2 border bg-white p-2"
+	class="sticky top-0 mx-4 mt-12 grid h-[6rem] grid-cols-[repeat(auto-fit,_200px)] items-center justify-center gap-2 border bg-white p-2"
 >
 	<h2 class="text-2xl font-bold">Filter</h2>
 	<div class="mb-4">
