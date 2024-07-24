@@ -9,6 +9,220 @@
 </script>
 
 <div
+	class=" mb-4 rounded-2xl border-4 border-gold-800 bg-gold-100 px-6 py-8 md:px-8"
+>
+	<h2>INFOPACK</h2>
+	<p style="text-align:justify;">Dear Leavers, Staff &amp; Alumni,</p>
+	<p style="text-align:justify;">
+		As Leavers’ Camp 2024 is fast approaching we wanted to share some essential
+		information with you.&nbsp;
+	</p>
+	<p style="text-align:justify;">
+		<strong>JOIN TODAY</strong>
+		<strong>!!4!!!!444</strong>
+	</p>
+	<p style="text-align:justify;">
+		This group chat is important for general updates before, during and after
+		the camp and is also a place to share your experiences with other campers
+		(photos, memes, shower thoughts, gossip etc. all allowed).
+	</p>
+	<p style="text-align:justify;">
+		<a target="_blank" href="https://chat.whatsapp.com/GKI78wPssuc9n5pYtxqakq">
+			<span style="color:rgb(17, 85, 204);">
+				https://chat.whatsapp.com/GKI78wPssuc9n5pYtxqakq
+			</span>
+		</a>
+	</p>
+	<p style="text-align:justify;">
+		<strong>[ EVERYBODY ]</strong>
+	</p>
+	<p style="text-align:justify;">
+		<strong>What to bring:</strong>
+	</p>
+	<ul>
+		<li>
+			<strong>Sleeping bag &amp; pillow:</strong>
+			To assure that everyone has enough blankets and pillows for the night, we ask
+			you to bring your own sleeping bag and a pillow if you can.
+		</li>
+		<li>
+			<strong>Comfortable Clothing:</strong>
+			Pack casual, comfortable clothes for various outdoor activities and prepare
+			for the hot weather! Please also note that evenings may get a bit cold, so
+			make sure to bring some layers just in case. Do not forget your sun protection
+			either!&nbsp;
+		</li>
+		<li>
+			<strong>Shoes:</strong>
+			Bring closed shoes and also slippers for the showers. Please be aware that
+			they may get a bit dirty during the outdoor activities, depending on the weather.
+		</li>
+		<li>
+			<strong>Raincoat</strong>
+			: Let’s hope you will not have to use it, but make sure that you have a raincoat
+			and a change of shoes in case the weather turns rainy!
+		</li>
+		<li>
+			<strong>Reusable cup/mug:</strong>
+			We ask you to bring your own glass to avoid the overflowing of sinks with undone
+			dishes.
+		</li>
+		<li>
+			<strong>Any prescription medication you require:</strong>
+			Please remember to bring any medications prescribed to you and do not forget
+			to inform the Organiser Committee about any medical or accessibility needs
+			you may have.
+		</li>
+		<li>
+			<strong>Other</strong>
+			: Bathroom necessities, sunscreen, mosquito repellent, board games, cards,
+			snacks, instruments, balls, etc. If you have any questions about additional
+			items you may consider bringing, please do not hesitate to contact us!
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<strong>Optional</strong>
+			: Leavers, if you prefer to sleep in a tent instead of the house dedicated
+			for students, please let us know, and also bring all necessary camping equipment
+			you may need! We have plenty of space on camp grounds that are suitable for
+			tents.
+		</li>
+	</ul>
+	<h3 style="text-align:justify;">What not to bring:</h3>
+	<ul>
+		<li>
+			<strong>Alcohol:</strong>
+			Do not worry about bringing your own drinks to the camp, our trusted friends
+			at Crafty Bar Budapest will supply an assortment of wines, beers and cocktails!
+		</li>
+		<li>
+			<strong>Precious items:</strong>
+			Any items you bring to Leavers’ Camp are your responsibility. We advise against
+			bringing valuables.
+		</li>
+	</ul>
+	<h3 style="text-align:justify;">[ FOR LEAVERS ]</h3>
+	<ul>
+		<li>
+			<strong>Your car:</strong>
+			&nbsp; All Leavers are required to arrive via the train and private bus, and
+			it is strictly forbidden to leave campgrounds without discussing it with the
+			Organizer Team first.
+		</li>
+	</ul>
+	<h3 style="text-align:justify;">Your first day at the camp:</h3>
+	<p style="text-align:justify;">
+		<strong>[ LEAVERS ]</strong>
+	</p>
+	<ul>
+		<li>
+			Meet us no later than
+			<strong>10:30 at Déli Pályaudvar</strong>
+			to board the train taking all Leavers to Veszprém where a bus will pick you
+			up and take you to Csórompuszta.
+			<strong>Important:</strong>
+			Due to changes in the MÁV ticket system it has become no longer financially
+			viable for us organizers to buy the train tickets for you. This is why we would
+			kindly like to ask all leavers who don’t already have a
+			<strong>Hungary Pass</strong>
+			(aka
+			<strong>Országbérlet</strong>
+			)
+			<strong>valid until at least August 4th</strong>
+			to please purchase one
+			<strong>with your student ID</strong>
+			(1890 Ft, can be purchased through the Budapest GO app as well).&nbsp;
+		</li>
+		<li>
+			Once you arrive at Déli Pályaudvar please find the two
+			<strong>Milestone staff members</strong>
+			and join the rest of the group.
+		</li>
+		<li>
+			Please bring lots of
+			<strong>water</strong>
+			with you for the trip, as it may be difficult to purchase more on the way,
+			and proper hydration is crucial in this July heat.
+		</li>
+		<li>
+			Make sure to bring
+			<strong>lunch</strong>
+			with you for the first day, your first meal at the camp will be dinner.
+		</li>
+		<li>
+			Please keep an eye out for the safety and wellbeing of all fellow
+			travelers throughout the whole trip to the camp.
+		</li>
+	</ul>
+	<p style="text-align:justify;">
+		<strong>[ STAFF AND ALUMNI ]</strong>
+	</p>
+	<ul>
+		<li>
+			The location of the camp is
+			<strong>Csórompuszta, Vigántpetend, 8294.</strong>
+			Please be aware that as Staff and Alumni you are required to organize your
+			own method of transportation to the camp. To make things easier, we created
+			a Carpool document which you can find through this link:&nbsp;
+		</li>
+	</ul>
+	<p style="text-align:justify;">
+		<a
+			target="_blank"
+			href="https://docs.google.com/spreadsheets/d/1ixLu28aWrdKcFJhnxI5Bwpi-qnrlT0TGT6jesBMewjs/edit?usp=sharing"
+		>
+			<span style="color:rgb(17, 85, 204);">
+				https://docs.google.com/spreadsheets/d/1ixLu28aWrdKcFJhnxI5Bwpi-qnrlT0TGT6jesBMewjs/edit?usp=sharing
+			</span>
+		</a>
+	</p>
+	<ul>
+		<li>
+			<strong>Upon arrival</strong>
+			, please write a short message in the camp group chat (see above) letting us
+			know that you’ve arrived and are ready to check in. After that members of the
+			Organizer Team will let you know when and where to meet them.
+		</li>
+		<li>
+			<strong>Accommodation:</strong>
+			Due to the limited number of available indoor sleeping places, we unfortunately
+			had to reallocate some of you to the outdoor accommodation. If this was the
+			case for you, we will contact you in a separate email, or maybe already have
+			done so. Therefore, we kindly ask you to bring a tent or arrive with a car
+			you can also sleep in. (Bed sharing or any other Honfoglaló-type moves are
+			strongly frowned upon!)
+		</li>
+	</ul>
+	<h3 style="text-align:justify;">Other essential info:</h3>
+	<ul>
+		<li>
+			House Rules: Familiarize yourself with <a href="/houserules">
+				the camp’s rules
+			</a>
+			available on our website!
+		</li>
+		<li>
+			Departure Day: Camp ends at 14:00 on the last day (August 4), after which
+			the train and bus will bring all Leavers back to Déli Pályaudvar. The
+			expected time of arrival is around 18:00 on August 4th (Sunday). Staff and
+			Alumni are welcome to stay longer or leave earlier as they please.
+		</li>
+		<li>
+			Activities and Schedule: A detailed schedule of activities will be
+			provided upon arrival. Get ready for an exciting array of games,
+			workshops, and social events!
+		</li>
+	</ul>
+	<p>
+		If you have any questions, updates or concerns please do not hesitate to
+		contact us by replying to this email or through the WhatsApp group chat (see
+		link above)!&nbsp;
+	</p>
+	<p>We look forward to seeing all of you soon!</p>
+</div>
+
+<div
 	class=" rounded-2xl border-4 border-gold-800 bg-gold-100 px-6 py-8 md:px-8"
 >
 	<h2>About the Leavers' Camp</h2>
@@ -103,7 +317,8 @@
 	{#if selectedRole}
 		<span>Important!</span>
 		<li class="">
-			If you register to the camp after June 17. you will only receive a full amount fee request. The same rules will still apply.
+			If you register to the camp after June 17. you will only receive a full
+			amount fee request. The same rules will still apply.
 		</li>
 		<li>
 			Make sure to pay all fee requests within 3 days. If you don't, we will
