@@ -42,7 +42,7 @@
 	<div class="mt-10 flex gap-4">
 		<Link href="/#information" icon="mdi:info" text="Infos" hot={false} />
 		{#if !data?.user}
-			<Link href="/register" icon="" text="Register" hot={true} />
+			<!-- <Link href="/register" icon="" text="Register" hot={true} /> -->
 		{/if}
 	</div>
 </section>

@@ -59,7 +59,7 @@
 <section>
 	<div class="flex flex-col items-center gap-4">
 		{#if !data?.user}
-			<Link href="/register" icon="" text="Register Now!" hot={true} />
+			<!-- <Link href="/register" icon="" text="Register Now!" hot={true} /> -->
 		{/if}
 
 		<Link href="/houserules" icon="mdi:house" text="House Rules" hot={false} />

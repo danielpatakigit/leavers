@@ -46,7 +46,7 @@
 				{:else}
 					<!-- <Link href="/" icon="" text="Home" hot={false} /> -->
 					<Link href="/login" icon="" text="Login" hot={false} />
-					<Link href="/register" icon="" text="Register" hot={true} />
+					<!-- <Link href="/register" icon="" text="Register" hot={true} /> -->
 				{/if}
 			{/key}
 		</div>

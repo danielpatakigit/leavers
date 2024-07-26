@@ -12,6 +12,12 @@
 	class=" mb-4 rounded-2xl border-4 border-gold-800 bg-gold-100 px-6 py-8 md:px-8"
 >
 	<h2>INFOPACK</h2>
+	<p>
+		<strong>
+			Registration to the 2024 Leavers' Camp is officially closed now.
+		</strong>
+		 Here is everything you need to know about your arrival to the camp.
+	</p>
 	<p style="text-align:justify;">Dear Leavers, Staff &amp; Alumni,</p>
 	<p style="text-align:justify;">
 		As Leavers’ Camp 2024 is fast approaching we wanted to share some essential
@@ -222,10 +228,12 @@
 	<p>We look forward to seeing all of you soon!</p>
 </div>
 
-<div
+<details
 	class=" rounded-2xl border-4 border-gold-800 bg-gold-100 px-6 py-8 md:px-8"
 >
-	<h2>About the Leavers' Camp</h2>
+	<summary>
+		<h2>About the Leavers' Camp</h2>
+	</summary>
 	<p>
 		The Milestone Leavers' Camp (MSLC24) in Csórompuszta, Hungary, scheduled for
 		July 31st to August 4th, 2024, is <strong>exclusively</strong>
@@ -316,10 +324,6 @@
 	{/if}
 	{#if selectedRole}
 		<span>Important!</span>
-		<li class="">
-			If you register to the camp after June 17. you will only receive a full
-			amount fee request. The same rules will still apply.
-		</li>
 		<li>
 			Make sure to pay all fee requests within 3 days. If you don't, we will
 			immediately cancel your registration.
@@ -332,7 +336,7 @@
 
 	<div class="mt-10 flex items-center justify-center">
 		{#if !data?.user}
-			<Link href="/register" icon="" text="Register Now!" hot={true} />
+			<!-- <Link href="/register" icon="" text="Register Now!" hot={true} /> -->
 		{:else}
 			<Link
 				href="/myregistration"
@@ -342,7 +346,7 @@
 			/>
 		{/if}
 	</div>
-</div>
+</details>
 <div class="mt-16">
 	<img src="/leavers_photo_group.jpg" alt="" class="rounded-xl" />
 </div>
