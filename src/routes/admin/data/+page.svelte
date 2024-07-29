@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from "svelte";
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 
@@ -48,6 +50,10 @@
 		"comment",
 	];
 
+	onMount(() => {
+		console.log(data);
+	});
+
 	// Helper function to sort object keys based on the defined order
 	function sortKeysByOrder(obj, order) {
 		const orderedObj = {};
@@ -71,13 +77,13 @@
 	}
 
 	// Sort keys for each record
-	const sortedRecords = data.records.map((record) =>
+	let sortedRecords = data.records.map((record) =>
 		sortKeysByOrder(record, columnOrder),
 	);
 </script>
 
 <h1 class="mt-24 text-center text-3xl font-bold">Data Input Page</h1>
-<pre>{JSON.stringify(data, null, 2)}</pre>
+<!-- <pre>{JSON.stringify(data, null, 2)}</pre> -->
 <table class="min-w-full divide-y divide-gray-200">
 	<thead class="bg-gray-50">
 		{#each sortedRecords as record, i}
